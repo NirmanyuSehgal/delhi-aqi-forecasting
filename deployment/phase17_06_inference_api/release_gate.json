@@ -1,0 +1,20 @@
+{
+  "created_at_utc": "2026-10-21T11:40:59.511910+00:00",
+  "feature_contract_count": 73,
+  "frozen_feature_contract_sha256": "cab75c26df1290defff2d5093ffab1b1f43c3c653340317c4d109d99930a8e0d",
+  "frozen_model_sha256": {
+    "extra_trees": "f0b3d43a56a7d5e4f08554f37ff234e1b5e012b5d5d69f18c750844b36cbe72d",
+    "random_forest": "538b5ff34152d19221518e831528093b7bcc57e2b05f82669718f540b514abd8"
+  },
+  "live_source_validated": false,
+  "production_enabled": false,
+  "status": "NO_VALIDATED_LIVE_AQI_SOURCE",
+  "required_before_enablement": [
+    "Validated provider and reproducible source connectivity",
+    "Verified mapping from each of the ten frozen stations to source station IDs",
+    "Fresh, timestamped values sufficient for every required feature",
+    "Valid historical AQI and pollutant lag/rolling-feature buffer",
+    "Successful end-to-end source-to-model validation",
+    "Authenticated API access and deployment security review"
+  ]
+}

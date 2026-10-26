@@ -1,0 +1,91 @@
+{
+  "project": "Delhi AQI t+1 Forecasting",
+  "closure_phase": "16.84R",
+  "closure_timestamp": "2026-10-07T17:17:12.930578",
+  "overall_state": "OFFLINE_FROZEN_RELEASE_COMPLETE_LIVE_DEPLOYMENT_BLOCKED",
+  "objective": "Predict AQI_t_plus_1 one hour ahead using information available through time t.",
+  "frozen_target": "AQI_t_plus_1",
+  "frozen_scope": {
+    "stations": 10,
+    "feature_count": 73,
+    "feature_contract_version": "delhi_aqi_73_features_v1",
+    "position_41": "NO2_lag_12h",
+    "position_42": "NOx_lag_12h"
+  },
+  "frozen_ensemble": {
+    "extra_trees_weight": 0.594466,
+    "random_forest_weight": 0.405534,
+    "components_refit_on": "TRAIN+VALID",
+    "final_holdout": "untouched"
+  },
+  "frozen_split": {
+    "TRAIN": 166845,
+    "VALIDATION": 69097,
+    "FINAL_HOLDOUT": 68352,
+    "UNUSED_GAP": 19,
+    "total": 304313
+  },
+  "final_holdout_reference": {
+    "rows": 68352,
+    "MAE": 3.216121,
+    "RMSE": 7.65839,
+    "R2": 0.996634,
+    "pm5_accuracy_percent": 85.249883,
+    "pm10_accuracy_percent": 94.605864,
+    "pm20_accuracy_percent": 98.090765,
+    "status": "FROZEN_REFERENCE_ONLY"
+  },
+  "phase_16_82R": {
+    "status": "COMPLETE",
+    "offline_smoke_rows": 32,
+    "holdout_rows_used": 0,
+    "valid_frame_accepted": true,
+    "missing_feature_rejected": true,
+    "unexpected_feature_rejected": true,
+    "ensemble_arithmetic_verified": true
+  },
+  "phase_16_83R": {
+    "status": "COMPLETE",
+    "offline_release": true,
+    "release_version": "phase16_83R_offline_frozen_release"
+  },
+  "production": {
+    "status": "NO_VALIDATED_LIVE_AQI_SOURCE",
+    "validated_live_sources": 0,
+    "enabled": false,
+    "blocked": true
+  },
+  "forbidden_substitutions": {
+    "open_meteo": true,
+    "aqicn_waqi": true,
+    "aqi_surrogate": true,
+    "aqi_reconstruction": true,
+    "silent_feature_substitution": true
+  },
+  "model_integrity": {
+    "extra_trees_bytes": 2505628019,
+    "random_forest_bytes": 494966579,
+    "extra_trees_sha256": "f0b3d43a56a7d5e4f08554f37ff234e1b5e012b5d5d69f18c750844b36cbe72d",
+    "random_forest_sha256": "538b5ff34152d19221518e831528093b7bcc57e2b05f82669718f540b514abd8"
+  },
+  "safety": {
+    "model_touched": false,
+    "model_retrained": false,
+    "model_retuned": false,
+    "feature_contract_changed": false,
+    "production_source_changed": false,
+    "final_holdout_touched": false,
+    "holdout_rows_used": 0
+  },
+  "important_artifacts": {
+    "feature_file": "/content/drive/MyDrive/Delhi-AQI-Prediction/data/processed/delhi_10_station_feature_engineered.parquet",
+    "split_file": "/content/drive/MyDrive/Delhi-AQI-Prediction/outputs/reports/phase15_1_time_split_assignments.parquet",
+    "frozen_package": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package",
+    "final_release": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release",
+    "phase16_83R_manifest": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/phase16_83R_release_manifest.json",
+    "phase16_83R_handoff": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/FINAL_OFFLINE_HANDOFF.md",
+    "phase16_82R_diagnostics": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_82R_offline_smoke_test/phase16_82R_offline_inference_smoke_test.json",
+    "production_guard": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/production_source_guard.py"
+  },
+  "project_conclusion": "The Delhi AQI forecasting model is frozen and validated for offline inference. The final weighted ensemble and 73-feature contract are preserved. A live production deployment is intentionally blocked because no validated live source currently supplies the complete required input vector."
+}

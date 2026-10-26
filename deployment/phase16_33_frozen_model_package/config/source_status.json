@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-10-04T11:43:41.569357+00:00",
+  "xkdr": {
+    "status": "not_usable_for_frozen_live_vector",
+    "direct_aqi_available": false,
+    "latest_test": "phase16_31",
+    "complete_11_non_aqi_current_window": 0
+  },
+  "ogd": {
+    "status": "api_network_unreachable_from_colab_runtime",
+    "latest_test": "phase16_32R",
+    "production_source_changed": false,
+    "api_key_saved": false
+  },
+  "production_policy": {
+    "frozen_73_feature_contract": true,
+    "model_retraining": false,
+    "model_retuning": false,
+    "holdout_modification": false,
+    "surrogate_aqi_production_use": false
+  }
+}

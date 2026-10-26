@@ -1,0 +1,50 @@
+{
+  "phase": "17.06A",
+  "created_at_utc": "2026-10-21T11:40:59.669101+00:00",
+  "decision": "SERVING_SCAFFOLD_CREATED_PRODUCTION_BLOCKED",
+  "project_root": "/content/gdrive/MyDrive/Delhi-AQI-Prediction",
+  "python_runtime_version_at_creation": "3.13.16",
+  "pinned_runtime_packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "joblib": "1.6.0",
+    "scipy": "1.16.3",
+    "threadpoolctl": "3.7.0",
+    "fastapi": "0.141.1",
+    "uvicorn": "0.54.0"
+  },
+  "frozen_feature_count": 73,
+  "frozen_feature_contract_sha256": "cab75c26df1290defff2d5093ffab1b1f43c3c653340317c4d109d99930a8e0d",
+  "frozen_model_sha256": {
+    "extra_trees": "f0b3d43a56a7d5e4f08554f37ff234e1b5e012b5d5d69f18c750844b36cbe72d",
+    "random_forest": "538b5ff34152d19221518e831528093b7bcc57e2b05f82669718f540b514abd8"
+  },
+  "artifacts": {
+    "deployment/phase17_06_inference_api/app.py": {
+      "sha256": "23ac2a3e1f26b49e73934ad5cd5cf457c07beb996d6290e70d2bda803876804f",
+      "size_bytes": 7668
+    },
+    "deployment/phase17_06_inference_api/requirements.txt": {
+      "sha256": "3b699f4b9826b268017414b3c77dee31d660f228032cf8039ce4c7733c552ade",
+      "size_bytes": 129
+    },
+    "deployment/phase17_06_inference_api/Dockerfile": {
+      "sha256": "26070904646394b791f575dfa2c9dcc62ee0fdff6db0c18d516e6b55c4786b18",
+      "size_bytes": 605
+    },
+    "deployment/phase17_06_inference_api/README.md": {
+      "sha256": "8176ae7d4f0a500be85c6ad410fa6972534e59a61423f54ed5b3e2ebc7b66ea1",
+      "size_bytes": 1726
+    },
+    "deployment/phase17_06_inference_api/release_gate.json": {
+      "sha256": "33b7ab29ca6fda438baa2bb0c2cb142e8307090fe3260b56aa718026e6c116f9",
+      "size_bytes": 953
+    }
+  },
+  "dockerignore_action": "created_minimal_deployment_context",
+  "live_source_validated": false,
+  "production_enabled": false,
+  "production_status": "NO_VALIDATED_LIVE_AQI_SOURCE",
+  "final_holdout_rows_used": 0
+}

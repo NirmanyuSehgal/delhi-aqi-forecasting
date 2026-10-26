@@ -1,0 +1,33 @@
+{
+  "phase": "DEPLOY-0.18-FIX",
+  "created_at_utc": "2026-10-26T14:35:28.100244+00:00",
+  "status": "OFFLINE_ONLY_CANDIDATE_NOT_LIVE_PRODUCTION",
+  "contract_version": "delhi_aqi_73_features_v1",
+  "feature_count": 73,
+  "target": "AQI_t_plus_1",
+  "expected_model_hashes": {
+    "extra_trees": "f0b3d43a56a7d5e4f08554f37ff234e1b5e012b5d5d69f18c750844b36cbe72d",
+    "random_forest": "538b5ff34152d19221518e831528093b7bcc57e2b05f82669718f540b514abd8"
+  },
+  "models_loaded_during_creation": false,
+  "models_retrained": false,
+  "models_retuned": false,
+  "frozen_package_modified": false,
+  "feature_builder_included": false,
+  "live_source_validated": false,
+  "production_enabled": false,
+  "syntax_check": "PASS",
+  "runtime_versions": {
+    "python": "3.13.16",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "joblib": "1.6.0",
+    "scikit_learn": "1.6.1",
+    "pyarrow": "23.0.1"
+  },
+  "files": {
+    "src/batch_predict.py": "66f9aaaff04059214706ab806e8f598ce8a5423b4a4f7ea7c046992dd01309ac",
+    "README.md": "5920abb7b3a0229c87dc4ee07f757cef13797b84ca01dec0c83f831330396beb",
+    "requirements.txt": "e3c57e7fe21869a8c469271ca9fea858400bf2176fc806d062e0c4a357bd56fe"
+  }
+}

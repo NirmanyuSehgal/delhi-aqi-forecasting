@@ -1,0 +1,400 @@
+{
+  "created_at_utc": "2026-10-26T16:03:47.158685+00:00",
+  "stage_path": "/content/drive/MyDrive/Delhi-AQI-Prediction/github_release_candidate_20261026T160347_158685Z",
+  "status": "STAGED_NOT_COMMITTED",
+  "git_initialized": false,
+  "pushed_to_github": false,
+  "models_included": false,
+  "raw_or_processed_datasets_included": false,
+  "notebooks": {
+    "processed": 26,
+    "outputs_removed": 1300
+  },
+  "file_count_before_manifest": 61,
+  "staged_files": [
+    {
+      "source": "notebooks/01_data_understanding.ipynb",
+      "staged_path": "notebooks/01_data_understanding.ipynb",
+      "size_bytes": 23242,
+      "sha256": "0d1de33c7ef0ada386251b8fb17d93ea30140280a46e1720b41206a522a5dd76",
+      "notebook_outputs_removed": 27
+    },
+    {
+      "source": "notebooks/02_data_quality_audit.ipynb",
+      "staged_path": "notebooks/02_data_quality_audit.ipynb",
+      "size_bytes": 24777,
+      "sha256": "4d96ebd617840d35e4516563dbf494067877e8adcab5e00bd306881f0406fb0d",
+      "notebook_outputs_removed": 26
+    },
+    {
+      "source": "notebooks/03_data_cleaning_preprocessing.ipynb",
+      "staged_path": "notebooks/03_data_cleaning_preprocessing.ipynb",
+      "size_bytes": 28604,
+      "sha256": "8fbf3d8f0b8c33b315e405b6d55502cc3bef5869faf9d46afc4eff8f8f434f1b",
+      "notebook_outputs_removed": 28
+    },
+    {
+      "source": "notebooks/04_eda.ipynb",
+      "staged_path": "notebooks/04_eda.ipynb",
+      "size_bytes": 29148,
+      "sha256": "d9159a6eced9b25aaacb74b69c2125b67f4345909d91f9f3d6801c475d9704bd",
+      "notebook_outputs_removed": 25
+    },
+    {
+      "source": "notebooks/05_feature_engineering.ipynb",
+      "staged_path": "notebooks/05_feature_engineering.ipynb",
+      "size_bytes": 36595,
+      "sha256": "e559b727b22bf3cf2e5337f946fe0c076e579e486c76cd8c96aa5c8122578ba8",
+      "notebook_outputs_removed": 28
+    },
+    {
+      "source": "notebooks/06_model_training.ipynb",
+      "staged_path": "notebooks/06_model_training.ipynb",
+      "size_bytes": 42518,
+      "sha256": "ce0dd6a2a0ced4a7e0490cea67c934624e13391d5a22564c0bfc0b2b8e97ca63",
+      "notebook_outputs_removed": 30
+    },
+    {
+      "source": "notebooks/07_model_evaluation_ablation.ipynb",
+      "staged_path": "notebooks/07_model_evaluation_ablation.ipynb",
+      "size_bytes": 55181,
+      "sha256": "1c4bcfe60880f25015f0ae7e5fc4f169678972ab19199b6018f29f9e74ced959",
+      "notebook_outputs_removed": 38
+    },
+    {
+      "source": "notebooks/08_deep_learning_models.ipynb",
+      "staged_path": "notebooks/08_deep_learning_models.ipynb",
+      "size_bytes": 43179,
+      "sha256": "669e30e2ac0f231c3902fbbc8c6bc2931ecfd67d081e751b3a2c68253bd51bc3",
+      "notebook_outputs_removed": 40
+    },
+    {
+      "source": "notebooks/09_vmd_pso_vmd.ipynb",
+      "staged_path": "notebooks/09_vmd_pso_vmd.ipynb",
+      "size_bytes": 54951,
+      "sha256": "302ca0725eb658089ffc4214f70595339ca56f6a3582049ec86e1c338555ed1a",
+      "notebook_outputs_removed": 40
+    },
+    {
+      "source": "notebooks/10_timegan_advanced_hybrid.ipynb",
+      "staged_path": "notebooks/10_timegan_advanced_hybrid.ipynb",
+      "size_bytes": 75962,
+      "sha256": "5164bfc60edf5c2f9475ec4f9923c8fa892bd93dee5ea91b2e656f68706ba2ba",
+      "notebook_outputs_removed": 43
+    },
+    {
+      "source": "notebooks/11_5_standardized_deep_learning_validation.ipynb",
+      "staged_path": "notebooks/11_5_standardized_deep_learning_validation.ipynb",
+      "size_bytes": 39179,
+      "sha256": "d54c78243dd11200e3b9c1a531301b976a076878f9c34409222a8e8371c4fbfc",
+      "notebook_outputs_removed": 25
+    },
+    {
+      "source": "notebooks/11_75_final_station_selection.ipynb",
+      "staged_path": "notebooks/11_75_final_station_selection.ipynb",
+      "size_bytes": 39088,
+      "sha256": "47c41e106437f3b50b38bfef897669d38192a38a03448984a44e306f719f57c6",
+      "notebook_outputs_removed": 28
+    },
+    {
+      "source": "notebooks/11_comprehensive_model_comparison.ipynb",
+      "staged_path": "notebooks/11_comprehensive_model_comparison.ipynb",
+      "size_bytes": 34430,
+      "sha256": "c66038bd737631abaa67de6b26c0a143f6e45ac804bdcf8df1f57f161298a8e6",
+      "notebook_outputs_removed": 26
+    },
+    {
+      "source": "notebooks/12_0_10_station_training_inference_parity.ipynb",
+      "staged_path": "notebooks/12_0_10_station_training_inference_parity.ipynb",
+      "size_bytes": 84392,
+      "sha256": "0b7e3cbff6abb80d14a57afde5c96bda779168328ed9ae8650276cb881c2f8de",
+      "notebook_outputs_removed": 27
+    },
+    {
+      "source": "notebooks/12_5_final_10_station_model_comparison.ipynb",
+      "staged_path": "notebooks/12_5_final_10_station_model_comparison.ipynb",
+      "size_bytes": 69471,
+      "sha256": "699ac73fcc07fb0d95aab9b088b878ff623fcdf6f459c0993a45d13189583509",
+      "notebook_outputs_removed": 44
+    },
+    {
+      "source": "notebooks/12_6_model_prediction_accuracy.ipynb",
+      "staged_path": "notebooks/12_6_model_prediction_accuracy.ipynb",
+      "size_bytes": 55349,
+      "sha256": "fbe56c89be7dd930fb3e43ffb701caccbaa9eda99f8261504655d5fc2033d3d3",
+      "notebook_outputs_removed": 30
+    },
+    {
+      "source": "notebooks/12_live_style_inference_pipeline.ipynb",
+      "staged_path": "notebooks/12_live_style_inference_pipeline.ipynb",
+      "size_bytes": 47161,
+      "sha256": "a6b3cce12284e520c41a3bc5f69f83322127030f41df4400e23baba67b33cbb2",
+      "notebook_outputs_removed": 19
+    },
+    {
+      "source": "notebooks/13A_live_adapter_offline_replay.ipynb",
+      "staged_path": "notebooks/13A_live_adapter_offline_replay.ipynb",
+      "size_bytes": 57067,
+      "sha256": "28ee995fdbedc610b054acc74c49589a2378813a73916cfd302eea04eb241e97",
+      "notebook_outputs_removed": 20
+    },
+    {
+      "source": "notebooks/13B_random_forest_optimization.ipynb",
+      "staged_path": "notebooks/13B_random_forest_optimization.ipynb",
+      "size_bytes": 43090,
+      "sha256": "e53eb62ee0bdec75c932eff5f1d62e444ca38f5a80e3567cdd1abeaedf2dc852",
+      "notebook_outputs_removed": 17
+    },
+    {
+      "source": "notebooks/13_cpcb_ogd_live_integration.ipynb",
+      "staged_path": "notebooks/13_cpcb_ogd_live_integration.ipynb",
+      "size_bytes": 15443,
+      "sha256": "edc5396eee2eaf46c24cc9a73fb4d12222540bdd5b5403da479e85eeac66020b",
+      "notebook_outputs_removed": 12
+    },
+    {
+      "source": "notebooks/14_feature_optimization_ablation.ipynb",
+      "staged_path": "notebooks/14_feature_optimization_ablation.ipynb",
+      "size_bytes": 168498,
+      "sha256": "d3c51148f2c03b2d5487f391e4dcf4e8c6b151877332acea358423dfba566adf",
+      "notebook_outputs_removed": 48
+    },
+    {
+      "source": "notebooks/15_model_competition_ensemble_xai.ipynb",
+      "staged_path": "notebooks/15_model_competition_ensemble_xai.ipynb",
+      "size_bytes": 550641,
+      "sha256": "b9458a55a10a47dfa486fc47434076c924e02d3fc72d016a4e7ed445d70c8ca3",
+      "notebook_outputs_removed": 67
+    },
+    {
+      "source": "notebooks/16_deployment_live_inference.ipynb",
+      "staged_path": "notebooks/16_deployment_live_inference.ipynb",
+      "size_bytes": 5563532,
+      "sha256": "d51a22b87c52a1b9d87351b3a4fba466452677bbd1ecb44ed85f0b27751a7b56",
+      "notebook_outputs_removed": 395
+    },
+    {
+      "source": "notebooks/17_final_results_visualization.ipynb",
+      "staged_path": "notebooks/17_final_results_visualization.ipynb",
+      "size_bytes": 348128,
+      "sha256": "234ea8f3ba83e8c3e4d0828f3456ef876f2e3037b9b06426a20f0fc42be6a5a8",
+      "notebook_outputs_removed": 31
+    },
+    {
+      "source": "notebooks/Delhi_AQI_DEPLOY_0_ReadOnly_Audit_20261026.ipynb",
+      "staged_path": "notebooks/Delhi_AQI_DEPLOY_0_ReadOnly_Audit_20261026.ipynb",
+      "size_bytes": 282415,
+      "sha256": "6d5aa93bcd9927b92de2caba668c55f923ee8012476081f8bf3e8fc758def166",
+      "notebook_outputs_removed": 35
+    },
+    {
+      "source": "notebooks/Delhi_AQI_Research_Paper_Completion_Phase_17_07.ipynb",
+      "staged_path": "notebooks/Delhi_AQI_Research_Paper_Completion_Phase_17_07.ipynb",
+      "size_bytes": 1177578,
+      "sha256": "a6b28f9bbd35e4c08847718c71b8bef887602f0218fe6cd2d8c621eeeadd42bd",
+      "notebook_outputs_removed": 151
+    },
+    {
+      "source": "deployment/phase16_33_frozen_model_package/src/frozen_aqi_inference.py",
+      "staged_path": "deployment/phase16_33_frozen_model_package/src/frozen_aqi_inference.py",
+      "size_bytes": 2954,
+      "sha256": "4b1fec9567013fd9072ff8e968e4526384fc7a5992e69ef572e32ea8d0b16bea"
+    },
+    {
+      "source": "deployment/phase16_33_frozen_model_package/config/ensemble_config.json",
+      "staged_path": "deployment/phase16_33_frozen_model_package/config/ensemble_config.json",
+      "size_bytes": 427,
+      "sha256": "0b8aa2a4a243b1057fe05afae493bd710b9fed0139031a44c8d5ba117eed3b06"
+    },
+    {
+      "source": "deployment/phase16_33_frozen_model_package/config/feature_contract.json",
+      "staged_path": "deployment/phase16_33_frozen_model_package/config/feature_contract.json",
+      "size_bytes": 1677,
+      "sha256": "cab75c26df1290defff2d5093ffab1b1f43c3c653340317c4d109d99930a8e0d"
+    },
+    {
+      "source": "deployment/phase16_33_frozen_model_package/config/source_status.json",
+      "staged_path": "deployment/phase16_33_frozen_model_package/config/source_status.json",
+      "size_bytes": 618,
+      "sha256": "436d2e719a8cbbe56041dc1432886463e8c139bb5d7244e73d9f60166a1cd92d"
+    },
+    {
+      "source": "deployment/phase17_06_inference_api/CLOUD_RUN_DEPLOYMENT_HANDOFF.md",
+      "staged_path": "deployment/phase17_06_inference_api/CLOUD_RUN_DEPLOYMENT_HANDOFF.md",
+      "size_bytes": 2897,
+      "sha256": "89ed286d65e12c47a646254922d96946d3ec617d26363d1d8951d4862edefc7c"
+    },
+    {
+      "source": "deployment/phase17_06_inference_api/Dockerfile",
+      "staged_path": "deployment/phase17_06_inference_api/Dockerfile",
+      "size_bytes": 605,
+      "sha256": "26070904646394b791f575dfa2c9dcc62ee0fdff6db0c18d516e6b55c4786b18"
+    },
+    {
+      "source": "deployment/phase17_06_inference_api/README.md",
+      "staged_path": "deployment/phase17_06_inference_api/README.md",
+      "size_bytes": 1726,
+      "sha256": "8176ae7d4f0a500be85c6ad410fa6972534e59a61423f54ed5b3e2ebc7b66ea1"
+    },
+    {
+      "source": "deployment/phase17_06_inference_api/app.py",
+      "staged_path": "deployment/phase17_06_inference_api/app.py",
+      "size_bytes": 7804,
+      "sha256": "94cdee5df4edb8d0fee5cf35c38a5cbb822a69f0cbccd09b7516abb72b15f194"
+    },
+    {
+      "source": "deployment/phase17_06_inference_api/build_and_smoke_test.sh",
+      "staged_path": "deployment/phase17_06_inference_api/build_and_smoke_test.sh",
+      "size_bytes": 2094,
+      "sha256": "d60d07b2f7733a9c1bd26f16300f0259369c725e69b95ea2a9f5dfff12f9918e"
+    },
+    {
+      "source": "deployment/phase17_06_inference_api/deploy_to_cloud_run_staging.sh",
+      "staged_path": "deployment/phase17_06_inference_api/deploy_to_cloud_run_staging.sh",
+      "size_bytes": 1906,
+      "sha256": "964a01fca5da2b0a731011167e31dbd22bdc041d554d3bc38cc65d921d14e110"
+    },
+    {
+      "source": "deployment/phase17_06_inference_api/phase17_06A_scaffold_manifest.json",
+      "staged_path": "deployment/phase17_06_inference_api/phase17_06A_scaffold_manifest.json",
+      "size_bytes": 1935,
+      "sha256": "be37ee14760bb9995cfddc826bb611268b23b8b0ed98fd9bc5a27b6640b805fb"
+    },
+    {
+      "source": "deployment/phase17_06_inference_api/release_gate.json",
+      "staged_path": "deployment/phase17_06_inference_api/release_gate.json",
+      "size_bytes": 953,
+      "sha256": "33b7ab29ca6fda438baa2bb0c2cb142e8307090fe3260b56aa718026e6c116f9"
+    },
+    {
+      "source": "deployment/phase17_06_inference_api/requirements.txt",
+      "staged_path": "deployment/phase17_06_inference_api/requirements.txt",
+      "size_bytes": 129,
+      "sha256": "3b699f4b9826b268017414b3c77dee31d660f228032cf8039ce4c7733c552ade"
+    },
+    {
+      "source": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/README.md",
+      "staged_path": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/README.md",
+      "size_bytes": 919,
+      "sha256": "5920abb7b3a0229c87dc4ee07f757cef13797b84ca01dec0c83f831330396beb"
+    },
+    {
+      "source": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/candidate_manifest.json",
+      "staged_path": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/candidate_manifest.json",
+      "size_bytes": 1183,
+      "sha256": "5eb444c66f2989219c56209ed1038bc6ff9e5982966dd148132601b96db8c3f9"
+    },
+    {
+      "source": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/requirements.txt",
+      "staged_path": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/requirements.txt",
+      "size_bytes": 77,
+      "sha256": "e3c57e7fe21869a8c469271ca9fea858400bf2176fc806d062e0c4a357bd56fe"
+    },
+    {
+      "source": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/src/batch_predict.py",
+      "staged_path": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/src/batch_predict.py",
+      "size_bytes": 10751,
+      "sha256": "66f9aaaff04059214706ab806e8f598ce8a5423b4a4f7ea7c046992dd01309ac"
+    },
+    {
+      "source": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/FINAL_OFFLINE_HANDOFF.md",
+      "staged_path": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/FINAL_OFFLINE_HANDOFF.md",
+      "size_bytes": 3682,
+      "sha256": "4167c48a798567ac82f321f8a31aadd90ee9bf27a7f99203b5532115b7081c3d"
+    },
+    {
+      "source": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/PROJECT_STATUS_PHASE16_83R_FINAL.json",
+      "staged_path": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/PROJECT_STATUS_PHASE16_83R_FINAL.json",
+      "size_bytes": 1322,
+      "sha256": "741b49347a3f6438281f4267d292e6c0b8c5e6e106763f4d3bd550d24ffad792"
+    },
+    {
+      "source": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/offline_inference_example.py",
+      "staged_path": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/offline_inference_example.py",
+      "size_bytes": 1547,
+      "sha256": "5067bcb847ab4da6119596b3513518ddde653d5864f4ecc02982e1b9424a5065"
+    },
+    {
+      "source": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/phase16_83R_release_manifest.json",
+      "staged_path": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/phase16_83R_release_manifest.json",
+      "size_bytes": 3940,
+      "sha256": "4fe63bbaa3caebfa8501415942284f8c93898d7a5deac0e6d17d31c6d4a06459"
+    },
+    {
+      "source": "deployment/phase16_81R_final_deployment_lock/production_source_guard.py",
+      "staged_path": "deployment/phase16_81R_final_deployment_lock/production_source_guard.py",
+      "size_bytes": 1112,
+      "sha256": "06e80b9287cb4850d4d6e121b92689dc118efc320d750da8744933e74d5795f7"
+    },
+    {
+      "source": "deployment/releases/phase17_06E_cloud_run_handoff/PHASE_17_06E_CLOUD_RUN_DEPLOYMENT_GUIDE.md",
+      "staged_path": "deployment/releases/phase17_06E_cloud_run_handoff/PHASE_17_06E_CLOUD_RUN_DEPLOYMENT_GUIDE.md",
+      "size_bytes": 2897,
+      "sha256": "89ed286d65e12c47a646254922d96946d3ec617d26363d1d8951d4862edefc7c"
+    },
+    {
+      "source": "deployment/releases/phase17_06E_cloud_run_handoff/phase17_06E_cloud_run_handoff_report.json",
+      "staged_path": "deployment/releases/phase17_06E_cloud_run_handoff/phase17_06E_cloud_run_handoff_report.json",
+      "size_bytes": 1634,
+      "sha256": "fa6883740b9a7af8a7fa640907a13b4985f868393960941d48261af9287dd8ec"
+    },
+    {
+      "source": "final_project_handoff/FINAL_PROJECT_CHECKLIST.json",
+      "staged_path": "final_project_handoff/FINAL_PROJECT_CHECKLIST.json",
+      "size_bytes": 705,
+      "sha256": "92600b86fb9fa0ca46e255f67c630ae6b78b53cebe409ae461b4b2a66f501a91"
+    },
+    {
+      "source": "final_project_handoff/FINAL_PROJECT_HANDOFF.md",
+      "staged_path": "final_project_handoff/FINAL_PROJECT_HANDOFF.md",
+      "size_bytes": 5106,
+      "sha256": "fd3d1a80b3abcbb9c37ee071739cacb094c972749c6648ed36e1eec09bb4d0e2"
+    },
+    {
+      "source": "final_project_handoff/FINAL_PROJECT_STATUS.json",
+      "staged_path": "final_project_handoff/FINAL_PROJECT_STATUS.json",
+      "size_bytes": 3933,
+      "sha256": "c2683d627f78e73bd65663d7ff310a10720ae44e421e3899a87f182e236d18ed"
+    },
+    {
+      "source": "outputs/deployment_readiness/DEPLOY_0_20_20261026T151500_756276Z/DEPLOY_0_20_readiness.json",
+      "staged_path": "docs/deployment-audits/DEPLOY_0_20_20261026T151500_756276Z/DEPLOY_0_20_readiness.json",
+      "size_bytes": 8837,
+      "sha256": "1df294d1535fd43aab8acfe09b462728dbffe43e949a9862aa852867b61fcfb0"
+    },
+    {
+      "source": "outputs/deployment_readiness/DEPLOY_0_20_20261026T151500_756276Z/DEPLOY_0_20_readiness.md",
+      "staged_path": "docs/deployment-audits/DEPLOY_0_20_20261026T151500_756276Z/DEPLOY_0_20_readiness.md",
+      "size_bytes": 2142,
+      "sha256": "a842c8225ca2fc665e7bf14711234174224de221ec2ea36b403dfdf900acc236"
+    },
+    {
+      "source": "outputs/deployment_readiness/DEPLOY_0_21_20261026T153545_964511Z/DEPLOY_0_21_static_api_gate_audit.json",
+      "staged_path": "docs/deployment-audits/DEPLOY_0_21_20261026T153545_964511Z/DEPLOY_0_21_static_api_gate_audit.json",
+      "size_bytes": 76360,
+      "sha256": "250f93dab0f6617e7f1f06ced66734f2f4c32d5855d8839c3e548ae52652c943"
+    },
+    {
+      "source": "outputs/deployment_readiness/DEPLOY_0_21_20261026T153545_964511Z/DEPLOY_0_21_static_api_gate_audit.md",
+      "staged_path": "docs/deployment-audits/DEPLOY_0_21_20261026T153545_964511Z/DEPLOY_0_21_static_api_gate_audit.md",
+      "size_bytes": 46443,
+      "sha256": "6509f7293cc2e1721c204e9a67743e60ccc5e1abd55f069fe9a9ba35dadc821a"
+    },
+    {
+      "source": "outputs/deployment_readiness/DEPLOY_0_23_20261026T154652_539955Z/DEPLOY_0_23_blocked_api_test.json",
+      "staged_path": "docs/deployment-audits/DEPLOY_0_23_20261026T154652_539955Z/DEPLOY_0_23_blocked_api_test.json",
+      "size_bytes": 1869,
+      "sha256": "1ed4cba3ca2fb84771593fc4f0be765c843a29f5f4d024a85c28218acd572bdf"
+    },
+    {
+      "source": "outputs/deployment_readiness/DEPLOY_0_23_20261026T154652_539955Z/DEPLOY_0_23_blocked_api_test.md",
+      "staged_path": "docs/deployment-audits/DEPLOY_0_23_20261026T154652_539955Z/DEPLOY_0_23_blocked_api_test.md",
+      "size_bytes": 521,
+      "sha256": "6b3f8156344180c990db35baa8759ba7e6180e77d81bc5e71b4a492797b27ee7"
+    }
+  ],
+  "skipped_items": [],
+  "notebook_parse_errors": [],
+  "credential_pattern_findings": [],
+  "manual_review_required_before_git_commit": true
+}

@@ -1,0 +1,21 @@
+{
+  "phase_00_to_15_model_development": "FROZEN_COMPLETE",
+  "phase_15_final_model": "FROZEN",
+  "phase_16_source_discovery": "CLOSED",
+  "phase_16_82R_offline_smoke": "PASS",
+  "phase_16_83R_offline_release": "PASS",
+  "feature_contract_73": "VERIFIED",
+  "ensemble": "VERIFIED",
+  "split": "VERIFIED",
+  "final_holdout": "PROTECTED",
+  "validated_live_source": "NONE",
+  "production": "BLOCKED",
+  "open_meteo_substitution": "FORBIDDEN",
+  "aqicn_substitution": "FORBIDDEN",
+  "aqi_surrogate": "FORBIDDEN",
+  "aqi_reconstruction": "FORBIDDEN",
+  "silent_feature_substitution": "FORBIDDEN",
+  "retraining": "NOT_AUTHORIZED",
+  "retuning": "NOT_AUTHORIZED",
+  "project_state": "OFFLINE_RELEASE_COMPLETE"
+}

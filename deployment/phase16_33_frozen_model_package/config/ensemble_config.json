@@ -1,0 +1,14 @@
+{
+  "ensemble_version": "phase15_frozen_final",
+  "target": "AQI_t_plus_1",
+  "weights": {
+    "tuned_extra_trees": 0.594466,
+    "tuned_random_forest": 0.405534
+  },
+  "models": {
+    "tuned_extra_trees": "models/phase15_10_final_tuned_extra_trees_trainval.joblib",
+    "tuned_random_forest": "models/phase15_10_final_tuned_random_forest_trainval.joblib"
+  },
+  "components_refit_on": "TRAIN+VALID",
+  "holdout": "untouched"
+}

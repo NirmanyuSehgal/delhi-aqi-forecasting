@@ -1,0 +1,2167 @@
+{
+  "phase": "DEPLOY-0.21",
+  "created_at_utc": "2026-10-26T15:35:45.964511+00:00",
+  "audit_mode": "STATIC_READ_ONLY",
+  "models_loaded": false,
+  "service_started": false,
+  "production_activation_attempted": false,
+  "production_enabled_by_this_audit": false,
+  "files_inspected": 32,
+  "matched_source_lines_total": 591,
+  "python_syntax_failures": [],
+  "source_status_snapshot": {
+    "created_at": "2026-10-04T11:43:41.569357+00:00",
+    "xkdr": {
+      "status": "not_usable_for_frozen_live_vector",
+      "direct_aqi_available": false,
+      "latest_test": "phase16_31",
+      "complete_11_non_aqi_current_window": 0
+    },
+    "ogd": {
+      "status": "api_network_unreachable_from_colab_runtime",
+      "latest_test": "phase16_32R",
+      "production_source_changed": false,
+      "api_key_saved": false
+    },
+    "production_policy": {
+      "frozen_73_feature_contract": true,
+      "model_retraining": false,
+      "model_retuning": false,
+      "holdout_modification": false,
+      "surrogate_aqi_production_use": false
+    }
+  },
+  "file_findings": [
+    {
+      "path": "deployment/phase16_81R_final_deployment_lock/phase16_81R_final_readiness.json",
+      "sha256": "b3ae978f3340ac889377ce86e6c1f94635e0134e209ceab726fd88aa1bffc948",
+      "size_bytes": 3191,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 25,
+          "source": "    \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 29,
+          "source": "        \"production_ready\": false,"
+        },
+        {
+          "line": 34,
+          "source": "        \"production_ready\": false,"
+        },
+        {
+          "line": 35,
+          "source": "        \"reason\": \"Official API access was blocked from Colab at the network layer; production capability was not validated.\""
+        },
+        {
+          "line": 39,
+          "source": "        \"production_ready\": false,"
+        },
+        {
+          "line": 40,
+          "source": "        \"reason\": \"Current CPCB production data route was not confirmed from the deployment environment.\""
+        },
+        {
+          "line": 44,
+          "source": "        \"production_ready\": false,"
+        },
+        {
+          "line": 49,
+          "source": "        \"production_ready\": false,"
+        },
+        {
+          "line": 54,
+          "source": "        \"production_ready\": false,"
+        },
+        {
+          "line": 59,
+          "source": "        \"production_ready\": false,"
+        },
+        {
+          "line": 64,
+          "source": "        \"production_ready\": false,"
+        },
+        {
+          "line": 69,
+          "source": "  \"production_lock\": {"
+        },
+        {
+          "line": 70,
+          "source": "    \"production_enabled\": false,"
+        },
+        {
+          "line": 72,
+          "source": "    \"reason\": \"No validated live source currently supplies the complete frozen 73-feature vector with compatible station/AQI provenance.\","
+        },
+        {
+          "line": 87,
+          "source": "    \"production_source_changed\": false,"
+        },
+        {
+          "line": 88,
+          "source": "    \"feature_contract_changed\": false,"
+        }
+      ],
+      "matched_line_count": 16
+    },
+    {
+      "path": "deployment/phase16_81R_final_deployment_lock/phase16_82R_offline_smoke_test/phase16_82R_offline_inference_smoke_test.json",
+      "sha256": "5018e0e1e1306be0bbd3237487d48307b36c8869cdd0259481ee1ee2c5894d1c",
+      "size_bytes": 1601,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 12,
+          "source": "  \"feature_path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/data/processed/delhi_10_station_feature_engineered.parquet\","
+        },
+        {
+          "line": 13,
+          "source": "  \"split_path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/outputs/reports/phase15_1_time_split_assignments.parquet\","
+        },
+        {
+          "line": 30,
+          "source": "    \"missing_feature_rejected\": true,"
+        },
+        {
+          "line": 33,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 34,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 38,
+          "source": "  \"feature_contract_changed\": false,"
+        },
+        {
+          "line": 39,
+          "source": "  \"production_source_changed\": false,"
+        }
+      ],
+      "matched_line_count": 7
+    },
+    {
+      "path": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/FINAL_OFFLINE_HANDOFF.md",
+      "sha256": "4167c48a798567ac82f321f8a31aadd90ee9bf27a7f99203b5532115b7081c3d",
+      "size_bytes": 3682,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 5,
+          "source": "**OFFLINE FROZEN RELEASE — NOT LIVE PRODUCTION**"
+        },
+        {
+          "line": 15,
+          "source": "Predict `AQI_t_plus_1` one hour ahead using information available through time t."
+        },
+        {
+          "line": 28,
+          "source": "## Frozen feature contract"
+        },
+        {
+          "line": 43,
+          "source": "`/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/feature_contract.json`"
+        },
+        {
+          "line": 49,
+          "source": "`/content/drive/MyDrive/Delhi-AQI-Prediction/outputs/reports/phase15_1_time_split_assignments.parquet`"
+        },
+        {
+          "line": 68,
+          "source": "- missing-feature rejection"
+        },
+        {
+          "line": 114,
+          "source": "## Production status"
+        },
+        {
+          "line": 116,
+          "source": "Validated live production sources:"
+        },
+        {
+          "line": 119,
+          "source": "Production status:"
+        },
+        {
+          "line": 122,
+          "source": "Production deployment:"
+        },
+        {
+          "line": 138,
+          "source": "Live production requires a separately validated source capable of supplying"
+        },
+        {
+          "line": 146,
+          "source": "`/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package`"
+        },
+        {
+          "line": 150,
+          "source": "`/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock`"
+        },
+        {
+          "line": 154,
+          "source": "`/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_82R_offline_smoke_test`"
+        },
+        {
+          "line": 158,
+          "source": "`/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release`"
+        },
+        {
+          "line": 162,
+          "source": "`/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/phase16_83R_release_manifest.json`"
+        },
+        {
+          "line": 164,
+          "source": "Production guard:"
+        },
+        {
+          "line": 166,
+          "source": "`/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/production_source_guard.py`"
+        },
+        {
+          "line": 176,
+          "source": "Feature contract changed: **False**"
+        },
+        {
+          "line": 178,
+          "source": "Production source changed: **False**"
+        }
+      ],
+      "matched_line_count": 20
+    },
+    {
+      "path": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/PROJECT_STATUS_PHASE16_83R_FINAL.json",
+      "sha256": "741b49347a3f6438281f4267d292e6c0b8c5e6e106763f4d3bd550d24ffad792",
+      "size_bytes": 1322,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 6,
+          "source": "  \"live_production_ready\": false,"
+        },
+        {
+          "line": 7,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 8,
+          "source": "  \"validated_live_sources\": 0,"
+        },
+        {
+          "line": 9,
+          "source": "  \"feature_contract_verified\": true,"
+        },
+        {
+          "line": 22,
+          "source": "  \"feature_contract_changed\": false,"
+        },
+        {
+          "line": 23,
+          "source": "  \"production_source_changed\": false,"
+        },
+        {
+          "line": 25,
+          "source": "  \"release_manifest\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/phase16_83R_release_manifest.json\","
+        },
+        {
+          "line": 26,
+          "source": "  \"handoff_document\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/FINAL_OFFLINE_HANDOFF.md\","
+        },
+        {
+          "line": 27,
+          "source": "  \"offline_example\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/offline_inference_example.py\","
+        },
+        {
+          "line": 28,
+          "source": "  \"next_state\": \"Offline frozen release complete. Live production remains blocked.\""
+        }
+      ],
+      "matched_line_count": 10
+    },
+    {
+      "path": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/offline_inference_example.py",
+      "sha256": "5067bcb847ab4da6119596b3513518ddde653d5864f4ecc02982e1b9424a5065",
+      "size_bytes": 1547,
+      "static_syntax": "PASS",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 11,
+          "source": "PROJECT_ROOT = Path(\"/content/drive/MyDrive/Delhi-AQI-Prediction\")"
+        },
+        {
+          "line": 12,
+          "source": "PACKAGE = Path(\"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package\")"
+        },
+        {
+          "line": 15,
+          "source": "    PACKAGE / \"config\" / \"feature_contract.json\","
+        },
+        {
+          "line": 32,
+          "source": "def predict_frozen_ensemble("
+        },
+        {
+          "line": 38,
+          "source": "            \"Input does not exactly match the frozen 73-feature contract.\""
+        },
+        {
+          "line": 48,
+          "source": "        ET.predict(X),"
+        },
+        {
+          "line": 53,
+          "source": "        RF.predict(X),"
+        },
+        {
+          "line": 62,
+          "source": "# Production is intentionally disabled."
+        },
+        {
+          "line": 63,
+          "source": "# prediction = predict_frozen_ensemble(X)"
+        },
+        {
+          "line": 64,
+          "source": "# print(prediction)"
+        }
+      ],
+      "matched_line_count": 10
+    },
+    {
+      "path": "deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/phase16_83R_release_manifest.json",
+      "sha256": "4fe63bbaa3caebfa8501415942284f8c93898d7a5deac0e6d17d31c6d4a06459",
+      "size_bytes": 3940,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 5,
+          "source": "  \"objective\": \"Predict AQI_t_plus_1 one hour ahead using information available through time t.\","
+        },
+        {
+          "line": 8,
+          "source": "  \"feature_contract\": {"
+        },
+        {
+          "line": 13,
+          "source": "    \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/feature_contract.json\""
+        },
+        {
+          "line": 24,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_extra_trees_trainval.joblib\","
+        },
+        {
+          "line": 29,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_random_forest_trainval.joblib\","
+        },
+        {
+          "line": 35,
+          "source": "    \"feature_file\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/data/processed/delhi_10_station_feature_engineered.parquet\","
+        },
+        {
+          "line": 36,
+          "source": "    \"split_file\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/outputs/reports/phase15_1_time_split_assignments.parquet\","
+        },
+        {
+          "line": 50,
+          "source": "    \"validator_missing_feature_rejection\": true,"
+        },
+        {
+          "line": 64,
+          "source": "  \"production\": {"
+        },
+        {
+          "line": 66,
+          "source": "    \"enabled\": false,"
+        },
+        {
+          "line": 67,
+          "source": "    \"validated_live_sources\": 0,"
+        },
+        {
+          "line": 79,
+          "source": "    \"feature_contract_changed\": false,"
+        },
+        {
+          "line": 80,
+          "source": "    \"production_source_changed\": false,"
+        },
+        {
+          "line": 85,
+          "source": "    \"inference_module\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/src/frozen_aqi_inference.py\","
+        },
+        {
+          "line": 86,
+          "source": "    \"production_guard\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/production_source_guard.py\","
+        },
+        {
+          "line": 87,
+          "source": "    \"phase16_82r_smoke_predictions\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_82R_offline_smoke_test/phase16_82R_validation_smoke_predictions.parquet\","
+        },
+        {
+          "line": 88,
+          "source": "    \"phase16_82r_diagnostics\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_82R_offline_smoke_test/phase16_82R_offline_inference_smoke_test.json\""
+        },
+        {
+          "line": 90,
+          "source": "  \"release_note\": \"Offline frozen-model release only. Live production remains blocked because no validated live source currently supplies the complete frozen input vector.\""
+        }
+      ],
+      "matched_line_count": 18
+    },
+    {
+      "path": "deployment/phase16_81R_final_deployment_lock/production_source_guard.py",
+      "sha256": "06e80b9287cb4850d4d6e121b92689dc118efc320d750da8744933e74d5795f7",
+      "size_bytes": 1112,
+      "static_syntax": "PASS",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 2,
+          "source": "Frozen Delhi AQI production-source guard."
+        },
+        {
+          "line": 4,
+          "source": "Live production inference remains blocked until a validated"
+        },
+        {
+          "line": 8,
+          "source": "PRODUCTION_SOURCE_STATUS = \"NO_VALIDATED_LIVE_AQI_SOURCE\""
+        },
+        {
+          "line": 12,
+          "source": "class ProductionSourceBlocked(RuntimeError):"
+        },
+        {
+          "line": 16,
+          "source": "def assert_production_source_ready():"
+        },
+        {
+          "line": 18,
+          "source": "        PRODUCTION_SOURCE_STATUS"
+        },
+        {
+          "line": 19,
+          "source": "        != \"VALIDATED_LIVE_SOURCE_AVAILABLE\""
+        },
+        {
+          "line": 21,
+          "source": "        raise ProductionSourceBlocked("
+        },
+        {
+          "line": 31,
+          "source": "    assert_production_source_ready()"
+        }
+      ],
+      "matched_line_count": 9
+    },
+    {
+      "path": "deployment/phase17_06_inference_api/CLOUD_RUN_DEPLOYMENT_HANDOFF.md",
+      "sha256": "89ed286d65e12c47a646254922d96946d3ec617d26363d1d8951d4862edefc7c",
+      "size_bytes": 2897,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 8,
+          "source": "- Production: blocked with `NO_VALIDATED_LIVE_AQI_SOURCE`."
+        },
+        {
+          "line": 9,
+          "source": "- This deployment is private and readiness-blocked; it is not an approved live predictor."
+        },
+        {
+          "line": 13,
+          "source": "- Existing base release ZIP: `/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/Delhi-AQI-Prediction_phase17_03L_offline_release.zip`"
+        },
+        {
+          "line": 14,
+          "source": "- Small overlay ZIP: `/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_06E_cloud_run_handoff/phase17_06E_cloud_run_overlay.zip`"
+        },
+        {
+          "line": 28,
+          "source": "unzip -q /path/to/Delhi-AQI-Prediction_phase17_03L_offline_release.zip \\"
+        },
+        {
+          "line": 29,
+          "source": "  'Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/*' -d ."
+        },
+        {
+          "line": 31,
+          "source": "cd Delhi-AQI-Prediction/deployment"
+        },
+        {
+          "line": 50,
+          "source": "Request the health endpoint with a Google identity token:"
+        },
+        {
+          "line": 55,
+          "source": "TOKEN=$(gcloud auth print-identity-token)"
+        },
+        {
+          "line": 56,
+          "source": "curl -i -H \"Authorization: Bearer $TOKEN\" \"$SERVICE_URL/healthz\""
+        },
+        {
+          "line": 57,
+          "source": "curl -i -H \"Authorization: Bearer $TOKEN\" \"$SERVICE_URL/readyz\""
+        },
+        {
+          "line": 60,
+          "source": "Expected: `/healthz` returns HTTP 200. `/readyz` returns HTTP 503 with"
+        },
+        {
+          "line": 67,
+          "source": "- Do not set `LIVE_SOURCE_VALIDATED=true` or `PRODUCTION_ENABLED=true`."
+        },
+        {
+          "line": 69,
+          "source": "  lag/rolling features before production predictions can be enabled."
+        }
+      ],
+      "matched_line_count": 14
+    },
+    {
+      "path": "deployment/phase17_06_inference_api/Dockerfile",
+      "sha256": "26070904646394b791f575dfa2c9dcc62ee0fdff6db0c18d516e6b55c4786b18",
+      "size_bytes": 605,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 6,
+          "source": "    RELEASE_GATE_FILE=/app/phase17_06_inference_api/release_gate.json"
+        }
+      ],
+      "matched_line_count": 1
+    },
+    {
+      "path": "deployment/phase17_06_inference_api/README.md",
+      "sha256": "8176ae7d4f0a500be85c6ad410fa6972534e59a61423f54ed5b3e2ebc7b66ea1",
+      "size_bytes": 1726,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 5,
+          "source": "`NO_VALIDATED_LIVE_AQI_SOURCE` — production predictions are blocked."
+        },
+        {
+          "line": 11,
+          "source": "- `GET /healthz`: process liveness."
+        },
+        {
+          "line": 12,
+          "source": "- `GET /readyz`: production readiness; returns HTTP 503 while blocked."
+        },
+        {
+          "line": 13,
+          "source": "- `POST /predict`: accepts a JSON object containing a `records` list, each with"
+        },
+        {
+          "line": 14,
+          "source": "  the exact frozen 73 features. Returns 503 until all release gates pass."
+        },
+        {
+          "line": 15,
+          "source": "- Prediction requests require `Authorization: Bearer <API_BEARER_TOKEN>`"
+        },
+        {
+          "line": 16,
+          "source": "  after readiness is approved."
+        },
+        {
+          "line": 33,
+          "source": "Then query `/healthz` and `/readyz`. Expected: health returns HTTP 200;"
+        },
+        {
+          "line": 34,
+          "source": "readiness returns HTTP 503 and `NO_VALIDATED_LIVE_AQI_SOURCE`."
+        },
+        {
+          "line": 38,
+          "source": "- `LIVE_SOURCE_VALIDATED=true`"
+        },
+        {
+          "line": 39,
+          "source": "- `PRODUCTION_ENABLED=true`"
+        },
+        {
+          "line": 40,
+          "source": "- `API_BEARER_TOKEN` set as a platform secret"
+        },
+        {
+          "line": 42,
+          "source": "Both the environment flags and `release_gate.json` must be approved; setting"
+        },
+        {
+          "line": 49,
+          "source": "construct lag/rolling features. It is not a completed live production system."
+        }
+      ],
+      "matched_line_count": 14
+    },
+    {
+      "path": "deployment/phase17_06_inference_api/app.py",
+      "sha256": "94cdee5df4edb8d0fee5cf35c38a5cbb822a69f0cbccd09b7516abb72b15f194",
+      "size_bytes": 7804,
+      "static_syntax": "PASS",
+      "route_decorators": [
+        {
+          "line": 89,
+          "source": "@app.get(\"/\")"
+        },
+        {
+          "line": 98,
+          "source": "@app.get(\"/healthz\")"
+        },
+        {
+          "line": 106,
+          "source": "@app.get(\"/readyz\")"
+        },
+        {
+          "line": 120,
+          "source": "@app.post(\"/predict\")"
+        }
+      ],
+      "matches": [
+        {
+          "line": 26,
+          "source": "    os.environ.get(\"RELEASE_GATE_FILE\", str(SERVICE_DIR / \"release_gate.json\"))"
+        },
+        {
+          "line": 28,
+          "source": "CONTRACT_FILE = PACKAGE_DIR / \"config\" / \"feature_contract.json\""
+        },
+        {
+          "line": 34,
+          "source": "    raise RuntimeError(\"Frozen feature contract must contain 73 unique columns.\")"
+        },
+        {
+          "line": 40,
+          "source": "PREDICTION_COLUMNS = ["
+        },
+        {
+          "line": 53,
+          "source": "    description=\"Frozen 73-feature ensemble with a fail-closed production gate.\","
+        },
+        {
+          "line": 56,
+          "source": "def get_readiness():"
+        },
+        {
+          "line": 64,
+          "source": "        reasons.append(\"release_gate_unavailable\")"
+        },
+        {
+          "line": 66,
+          "source": "    if gate.get(\"live_source_validated\") is not True:"
+        },
+        {
+          "line": 67,
+          "source": "        reasons.append(\"live_source_not_validated_in_release_gate\")"
+        },
+        {
+          "line": 68,
+          "source": "    if gate.get(\"production_enabled\") is not True:"
+        },
+        {
+          "line": 69,
+          "source": "        reasons.append(\"production_disabled_in_release_gate\")"
+        },
+        {
+          "line": 71,
+          "source": "    if os.environ.get(\"LIVE_SOURCE_VALIDATED\", \"false\").lower() != \"true\":"
+        },
+        {
+          "line": 72,
+          "source": "        reasons.append(\"LIVE_SOURCE_VALIDATED_environment_flag_not_true\")"
+        },
+        {
+          "line": 73,
+          "source": "    if os.environ.get(\"PRODUCTION_ENABLED\", \"false\").lower() != \"true\":"
+        },
+        {
+          "line": 74,
+          "source": "        reasons.append(\"PRODUCTION_ENABLED_environment_flag_not_true\")"
+        },
+        {
+          "line": 75,
+          "source": "    if not os.environ.get(\"API_BEARER_TOKEN\", \"\").strip():"
+        },
+        {
+          "line": 76,
+          "source": "        reasons.append(\"API_BEARER_TOKEN_not_configured\")"
+        },
+        {
+          "line": 94,
+          "source": "        \"production_enabled\": False,"
+        },
+        {
+          "line": 95,
+          "source": "        \"message\": \"Use /healthz for liveness and /readyz for readiness.\","
+        },
+        {
+          "line": 98,
+          "source": "@app.get(\"/healthz\")"
+        },
+        {
+          "line": 99,
+          "source": "def healthz():"
+        },
+        {
+          "line": 103,
+          "source": "        \"production_enabled\": False,"
+        },
+        {
+          "line": 106,
+          "source": "@app.get(\"/readyz\")"
+        },
+        {
+          "line": 107,
+          "source": "def readyz():"
+        },
+        {
+          "line": 108,
+          "source": "    ready, reasons = get_readiness()"
+        },
+        {
+          "line": 116,
+          "source": "            \"production_enabled\": ready,"
+        },
+        {
+          "line": 120,
+          "source": "@app.post(\"/predict\")"
+        },
+        {
+          "line": 121,
+          "source": "async def predict(request: Request):"
+        },
+        {
+          "line": 123,
+          "source": "    ready, reasons = get_readiness()"
+        },
+        {
+          "line": 128,
+          "source": "                \"error\": \"production_predictions_blocked\","
+        },
+        {
+          "line": 134,
+          "source": "    token = os.environ.get(\"API_BEARER_TOKEN\", \"\").strip()"
+        },
+        {
+          "line": 136,
+          "source": "    supplied = auth[7:].strip() if auth.lower().startswith(\"bearer \") else \"\""
+        },
+        {
+          "line": 138,
+          "source": "    if not token or not supplied or not secrets.compare_digest(supplied, token):"
+        },
+        {
+          "line": 139,
+          "source": "        raise HTTPException(status_code=401, detail=\"Valid bearer token required.\")"
+        },
+        {
+          "line": 168,
+          "source": "                \"error\": \"feature_contract_mismatch\","
+        },
+        {
+          "line": 169,
+          "source": "                \"missing_features\": missing,"
+        },
+        {
+          "line": 176,
+          "source": "    X[\"StationId\"] = X[\"StationId\"].astype(str)"
+        },
+        {
+          "line": 178,
+          "source": "    invalid_stations = sorted(set(X[\"StationId\"].dropna()) - ALLOWED_STATIONS)"
+        },
+        {
+          "line": 179,
+          "source": "    if X[\"StationId\"].isna().any() or invalid_stations:"
+        },
+        {
+          "line": 183,
+          "source": "                \"error\": \"invalid_station_id\","
+        },
+        {
+          "line": 184,
+          "source": "                \"invalid_station_ids\": invalid_stations,"
+        },
+        {
+          "line": 188,
+          "source": "    numeric_features = [c for c in FEATURE_ORDER if c != \"StationId\"]"
+        },
+        {
+          "line": 209,
+          "source": "        pred = inference.predict_aqi(X)"
+        },
+        {
+          "line": 210,
+          "source": "        missing_outputs = [c for c in PREDICTION_COLUMNS if c not in pred.columns]"
+        },
+        {
+          "line": 215,
+          "source": "        for _, row in pred[PREDICTION_COLUMNS].iterrows():"
+        }
+      ],
+      "matched_line_count": 48
+    },
+    {
+      "path": "deployment/phase17_06_inference_api/phase17_06A_scaffold_manifest.json",
+      "sha256": "be37ee14760bb9995cfddc826bb611268b23b8b0ed98fd9bc5a27b6640b805fb",
+      "size_bytes": 1935,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 4,
+          "source": "  \"decision\": \"SERVING_SCAFFOLD_CREATED_PRODUCTION_BLOCKED\","
+        },
+        {
+          "line": 5,
+          "source": "  \"project_root\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction\","
+        },
+        {
+          "line": 18,
+          "source": "  \"frozen_feature_contract_sha256\": \"cab75c26df1290defff2d5093ffab1b1f43c3c653340317c4d109d99930a8e0d\","
+        },
+        {
+          "line": 40,
+          "source": "    \"deployment/phase17_06_inference_api/release_gate.json\": {"
+        },
+        {
+          "line": 46,
+          "source": "  \"live_source_validated\": false,"
+        },
+        {
+          "line": 47,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 48,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        }
+      ],
+      "matched_line_count": 7
+    },
+    {
+      "path": "deployment/phase17_06_inference_api/release_gate.json",
+      "sha256": "33b7ab29ca6fda438baa2bb0c2cb142e8307090fe3260b56aa718026e6c116f9",
+      "size_bytes": 953,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 3,
+          "source": "  \"feature_contract_count\": 73,"
+        },
+        {
+          "line": 4,
+          "source": "  \"frozen_feature_contract_sha256\": \"cab75c26df1290defff2d5093ffab1b1f43c3c653340317c4d109d99930a8e0d\","
+        },
+        {
+          "line": 9,
+          "source": "  \"live_source_validated\": false,"
+        },
+        {
+          "line": 10,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 14,
+          "source": "    \"Verified mapping from each of the ten frozen stations to source station IDs\","
+        }
+      ],
+      "matched_line_count": 5
+    },
+    {
+      "path": "deployment/releases/phase17_03L_offline_release/phase17_03L_release_bundle_verification.json",
+      "sha256": "4629b013e23add67388e3bb571acb2169d84ced37d542fccb6fa91c5e9e04d91",
+      "size_bytes": 1015,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 4,
+          "source": "  \"archive\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/Delhi-AQI-Prediction_phase17_03L_offline_release.zip\","
+        },
+        {
+          "line": 12,
+          "source": "  \"full_validation_prediction_max_abs_differences\": {"
+        },
+        {
+          "line": 20,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 21,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        }
+      ],
+      "matched_line_count": 4
+    },
+    {
+      "path": "deployment/releases/phase17_03L_offline_release/phase17_03M_safe_release_cleanup_report.json",
+      "sha256": "f1a6d5c322a63e715c98814768688f7da283c12c153ad38156d81feeefcba2fa",
+      "size_bytes": 701,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 4,
+          "source": "  \"release_archive\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/Delhi-AQI-Prediction_phase17_03L_offline_release.zip\","
+        },
+        {
+          "line": 13,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 14,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\""
+        }
+      ],
+      "matched_line_count": 3
+    },
+    {
+      "path": "deployment/releases/phase17_03L_offline_release/phase17_03N_final_release_handoff/PHASE_17_03N_FINAL_RELEASE_HANDOFF.md",
+      "sha256": "88cbe0257efaf1cb112fad750a39c7d113c43b3bc96aac6a94dcd337e7846213",
+      "size_bytes": 1308,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 7,
+          "source": "- Release ZIP: `/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/Delhi-AQI-Prediction_phase17_03L_offline_release.zip`"
+        },
+        {
+          "line": 13,
+          "source": "- Production enabled: **False**"
+        },
+        {
+          "line": 14,
+          "source": "- Production status: `NO_VALIDATED_LIVE_AQI_SOURCE`"
+        },
+        {
+          "line": 17,
+          "source": "Passed: Phase 17.03I/L/M explicitly report NO_VALIDATED_LIVE_AQI_SOURCE with production_enabled=false, and the source config contains no explicit positive readiness signal. The config is not required to repeat the exact runtime status string."
+        },
+        {
+          "line": 21,
+          "source": "Audit JSON: `/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/phase17_03N_final_release_handoff/phase17_03N_final_release_audit.json`"
+        },
+        {
+          "line": 22,
+          "source": "Repair evidence: `/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/phase17_03N_final_release_handoff/phase17_03N_R1_source_gate_audit_repair.json`"
+        }
+      ],
+      "matched_line_count": 6
+    },
+    {
+      "path": "deployment/releases/phase17_03L_offline_release/phase17_03N_final_release_handoff/phase17_03N_R1_source_gate_audit_repair.json",
+      "sha256": "98d798d47e2d43a8618365a45da0f73ee4f089446f61339180ab7cbbeeb6c0f5",
+      "size_bytes": 1153,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 8,
+          "source": "      \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 9,
+          "source": "      \"production_enabled\": false"
+        },
+        {
+          "line": 12,
+          "source": "      \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 13,
+          "source": "      \"production_enabled\": false"
+        },
+        {
+          "line": 16,
+          "source": "      \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 17,
+          "source": "      \"production_enabled\": false"
+        },
+        {
+          "line": 20,
+          "source": "      \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 21,
+          "source": "      \"production_enabled\": false"
+        },
+        {
+          "line": 25,
+          "source": "  \"source_config_true_production_flags\": [],"
+        },
+        {
+          "line": 26,
+          "source": "  \"details\": \"Passed: Phase 17.03I/L/M explicitly report NO_VALIDATED_LIVE_AQI_SOURCE with production_enabled=false, and the source config contains no explicit positive readiness signal. The config is not required to repeat the exact runtime status string.\","
+        },
+        {
+          "line": 27,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 28,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\""
+        }
+      ],
+      "matched_line_count": 12
+    },
+    {
+      "path": "deployment/releases/phase17_03L_offline_release/phase17_03N_final_release_handoff/phase17_03N_final_release_audit.json",
+      "sha256": "b7c84f4b12f51d6368858a11ca8b4d87eea3541c3ec504cdc4968ee31d91f187",
+      "size_bytes": 7567,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 9,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/Delhi-AQI-Prediction_phase17_03L_offline_release.zip\""
+        },
+        {
+          "line": 13,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/phase17_03L_release_bundle_verification.json\""
+        },
+        {
+          "line": 17,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/phase17_03M_safe_release_cleanup_report.json\""
+        },
+        {
+          "line": 21,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/source_status.json\""
+        },
+        {
+          "line": 23,
+          "source": "    \"artifact_feature_contract\": {"
+        },
+        {
+          "line": 25,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/feature_contract.json\""
+        },
+        {
+          "line": 29,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03H_runner_parity/phase17_03H_parity_report.json\""
+        },
+        {
+          "line": 33,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03I_full_validation_runner_parity/phase17_03I_full_validation_parity_report.json\""
+        },
+        {
+          "line": 37,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03J_negative_input_tests/phase17_03J_negative_input_report.json\""
+        },
+        {
+          "line": 41,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03K_offline_release_evidence/phase17_03K_offline_release_evidence_audit.json\""
+        },
+        {
+          "line": 45,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_extra_trees_trainval.joblib\""
+        },
+        {
+          "line": 49,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_random_forest_trainval.joblib\""
+        },
+        {
+          "line": 79,
+          "source": "    \"StationId_is_feature_73\": {"
+        },
+        {
+          "line": 81,
+          "source": "      \"detail\": \"Final feature=StationId\""
+        },
+        {
+          "line": 101,
+          "source": "      \"detail\": \"23,103 validation rows; all three prediction outputs within tolerance.\""
+        },
+        {
+          "line": 107,
+          "source": "    \"live_source_gate_remains_blocked\": {"
+        },
+        {
+          "line": 109,
+          "source": "      \"detail\": \"Passed: Phase 17.03I/L/M explicitly report NO_VALIDATED_LIVE_AQI_SOURCE with production_enabled=false, and the source config contains no explicit positive readiness signal. The config is not required to repeat the exact runtime status string.\""
+        },
+        {
+          "line": 111,
+          "source": "    \"production_not_enabled_in_source_config\": {"
+        },
+        {
+          "line": 113,
+          "source": "      \"detail\": \"No production_enabled=true flag found.\""
+        },
+        {
+          "line": 115,
+          "source": "    \"phase_I_production_disabled\": {"
+        },
+        {
+          "line": 117,
+          "source": "      \"detail\": \"production_enabled=False\""
+        },
+        {
+          "line": 119,
+          "source": "    \"phase_J_production_disabled\": {"
+        },
+        {
+          "line": 121,
+          "source": "      \"detail\": \"production_enabled=False\""
+        },
+        {
+          "line": 123,
+          "source": "    \"phase_K_production_disabled\": {"
+        },
+        {
+          "line": 125,
+          "source": "      \"detail\": \"production_enabled=False\""
+        },
+        {
+          "line": 127,
+          "source": "    \"phase_L_production_disabled\": {"
+        },
+        {
+          "line": 129,
+          "source": "      \"detail\": \"production_enabled=False\""
+        },
+        {
+          "line": 131,
+          "source": "    \"phase_M_production_disabled\": {"
+        },
+        {
+          "line": 133,
+          "source": "      \"detail\": \"production_enabled=False\""
+        },
+        {
+          "line": 141,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/bundle\""
+        },
+        {
+          "line": 145,
+          "source": "      \"detail\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/verification_extract\""
+        },
+        {
+          "line": 148,
+          "source": "  \"release_zip\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/Delhi-AQI-Prediction_phase17_03L_offline_release.zip\","
+        },
+        {
+          "line": 159,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 160,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 161,
+          "source": "  \"source_gate_repair_note\": \"The original check required the exact runtime status string to appear as a value in source_status.json. The corrected check uses the persisted Phase 17.03I/L/M runtime statuses and rejects explicit positive readiness signals in source configuration. No configuration or model file was changed.\","
+        },
+        {
+          "line": 162,
+          "source": "  \"source_status_file_checked\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/source_status.json\","
+        },
+        {
+          "line": 165,
+          "source": "      \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 166,
+          "source": "      \"production_enabled\": false"
+        },
+        {
+          "line": 169,
+          "source": "      \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 170,
+          "source": "      \"production_enabled\": false"
+        },
+        {
+          "line": 173,
+          "source": "      \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 174,
+          "source": "      \"production_enabled\": false"
+        },
+        {
+          "line": 177,
+          "source": "      \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 178,
+          "source": "      \"production_enabled\": false"
+        }
+      ],
+      "matched_line_count": 44
+    },
+    {
+      "path": "deployment/releases/phase17_06E_cloud_run_handoff/PHASE_17_06E_CLOUD_RUN_DEPLOYMENT_GUIDE.md",
+      "sha256": "89ed286d65e12c47a646254922d96946d3ec617d26363d1d8951d4862edefc7c",
+      "size_bytes": 2897,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 8,
+          "source": "- Production: blocked with `NO_VALIDATED_LIVE_AQI_SOURCE`."
+        },
+        {
+          "line": 9,
+          "source": "- This deployment is private and readiness-blocked; it is not an approved live predictor."
+        },
+        {
+          "line": 13,
+          "source": "- Existing base release ZIP: `/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/Delhi-AQI-Prediction_phase17_03L_offline_release.zip`"
+        },
+        {
+          "line": 14,
+          "source": "- Small overlay ZIP: `/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_06E_cloud_run_handoff/phase17_06E_cloud_run_overlay.zip`"
+        },
+        {
+          "line": 28,
+          "source": "unzip -q /path/to/Delhi-AQI-Prediction_phase17_03L_offline_release.zip \\"
+        },
+        {
+          "line": 29,
+          "source": "  'Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/*' -d ."
+        },
+        {
+          "line": 31,
+          "source": "cd Delhi-AQI-Prediction/deployment"
+        },
+        {
+          "line": 50,
+          "source": "Request the health endpoint with a Google identity token:"
+        },
+        {
+          "line": 55,
+          "source": "TOKEN=$(gcloud auth print-identity-token)"
+        },
+        {
+          "line": 56,
+          "source": "curl -i -H \"Authorization: Bearer $TOKEN\" \"$SERVICE_URL/healthz\""
+        },
+        {
+          "line": 57,
+          "source": "curl -i -H \"Authorization: Bearer $TOKEN\" \"$SERVICE_URL/readyz\""
+        },
+        {
+          "line": 60,
+          "source": "Expected: `/healthz` returns HTTP 200. `/readyz` returns HTTP 503 with"
+        },
+        {
+          "line": 67,
+          "source": "- Do not set `LIVE_SOURCE_VALIDATED=true` or `PRODUCTION_ENABLED=true`."
+        },
+        {
+          "line": 69,
+          "source": "  lag/rolling features before production predictions can be enabled."
+        }
+      ],
+      "matched_line_count": 14
+    },
+    {
+      "path": "deployment/releases/phase17_06E_cloud_run_handoff/phase17_06E_cloud_run_handoff_report.json",
+      "sha256": "fa6883740b9a7af8a7fa640907a13b4985f868393960941d48261af9287dd8ec",
+      "size_bytes": 1634,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 5,
+          "source": "  \"project_root\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction\","
+        },
+        {
+          "line": 6,
+          "source": "  \"base_release_zip\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/Delhi-AQI-Prediction_phase17_03L_offline_release.zip\","
+        },
+        {
+          "line": 8,
+          "source": "  \"overlay_zip\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_06E_cloud_run_handoff/phase17_06E_cloud_run_overlay.zip\","
+        },
+        {
+          "line": 15,
+          "source": "  \"cloud_run_deploy_script\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/phase17_06_inference_api/deploy_to_cloud_run_staging.sh\","
+        },
+        {
+          "line": 16,
+          "source": "  \"deployment_guide\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_06E_cloud_run_handoff/PHASE_17_06E_CLOUD_RUN_DEPLOYMENT_GUIDE.md\","
+        },
+        {
+          "line": 19,
+          "source": "  \"live_source_validated\": false,"
+        },
+        {
+          "line": 20,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 21,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        }
+      ],
+      "matched_line_count": 8
+    },
+    {
+      "path": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/README.md",
+      "sha256": "5920abb7b3a0229c87dc4ee07f757cef13797b84ca01dec0c83f831330396beb",
+      "size_bytes": 919,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 13,
+          "source": "    python src/batch_predict.py --input features.parquet --output new_predictions.parquet --metadata metadata.parquet"
+        },
+        {
+          "line": 15,
+          "source": "Metadata may contain only StationId and optional Datetime, StationName, Split"
+        },
+        {
+          "line": 19,
+          "source": "The candidate does not verify source freshness or prove a live source is valid."
+        },
+        {
+          "line": 20,
+          "source": "Production remains disabled."
+        }
+      ],
+      "matched_line_count": 4
+    },
+    {
+      "path": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/candidate_manifest.json",
+      "sha256": "5eb444c66f2989219c56209ed1038bc6ff9e5982966dd148132601b96db8c3f9",
+      "size_bytes": 1183,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 4,
+          "source": "  \"status\": \"OFFLINE_ONLY_CANDIDATE_NOT_LIVE_PRODUCTION\","
+        },
+        {
+          "line": 17,
+          "source": "  \"live_source_validated\": false,"
+        },
+        {
+          "line": 18,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 29,
+          "source": "    \"src/batch_predict.py\": \"66f9aaaff04059214706ab806e8f598ce8a5423b4a4f7ea7c046992dd01309ac\","
+        }
+      ],
+      "matched_line_count": 4
+    },
+    {
+      "path": "deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/src/batch_predict.py",
+      "sha256": "66f9aaaff04059214706ab806e8f598ce8a5423b4a4f7ea7c046992dd01309ac",
+      "size_bytes": 10751,
+      "static_syntax": "PASS",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 22,
+          "source": "ALLOWED_METADATA = {\"StationId\", \"Datetime\", \"StationName\", \"Split\"}"
+        },
+        {
+          "line": 95,
+          "source": "    contract = read_json(package / \"config\" / \"feature_contract.json\")"
+        },
+        {
+          "line": 106,
+          "source": "        raise ValueError(\"Invalid frozen feature contract.\")"
+        },
+        {
+          "line": 141,
+          "source": "    if X[\"StationId\"].isna().any():"
+        },
+        {
+          "line": 142,
+          "source": "        raise ValueError(\"StationId contains missing values.\")"
+        },
+        {
+          "line": 143,
+          "source": "    X[\"StationId\"] = X[\"StationId\"].astype(str)"
+        },
+        {
+          "line": 145,
+          "source": "    invalid_stations = sorted(set(X[\"StationId\"]) - ALLOWED_STATIONS)"
+        },
+        {
+          "line": 147,
+          "source": "        raise ValueError(f\"Unknown station IDs: {invalid_stations}\")"
+        },
+        {
+          "line": 149,
+          "source": "    numeric = [c for c in features if c != \"StationId\"]"
+        },
+        {
+          "line": 163,
+          "source": "        if \"StationId\" not in metadata:"
+        },
+        {
+          "line": 164,
+          "source": "            raise ValueError(\"Metadata must contain StationId.\")"
+        },
+        {
+          "line": 165,
+          "source": "        if not metadata[\"StationId\"].astype(str).reset_index(drop=True).equals("
+        },
+        {
+          "line": 166,
+          "source": "            X[\"StationId\"].reset_index(drop=True)"
+        },
+        {
+          "line": 168,
+          "source": "            raise ValueError(\"Metadata station IDs/order do not align with inputs.\")"
+        },
+        {
+          "line": 184,
+          "source": "    predictions = inference.predict_aqi(checked)"
+        },
+        {
+          "line": 185,
+          "source": "    missing_outputs = [c for c in OUTPUT_COLUMNS if c not in predictions.columns]"
+        },
+        {
+          "line": 187,
+          "source": "        raise RuntimeError(f\"Prediction outputs missing: {missing_outputs}\")"
+        },
+        {
+          "line": 189,
+          "source": "    pred_values = predictions[OUTPUT_COLUMNS].to_numpy(dtype=float)"
+        },
+        {
+          "line": 191,
+          "source": "        raise RuntimeError(\"Non-finite predictions returned.\")"
+        },
+        {
+          "line": 194,
+          "source": "        w_et * predictions[\"AQI_pred_extra_trees\"].to_numpy(dtype=float)"
+        },
+        {
+          "line": 195,
+          "source": "        + w_rf * predictions[\"AQI_pred_random_forest\"].to_numpy(dtype=float)"
+        },
+        {
+          "line": 198,
+          "source": "        expected_ensemble - predictions[\"AQI_t_plus_1_pred\"].to_numpy(dtype=float)"
+        },
+        {
+          "line": 206,
+          "source": "        \"StationId\": X[\"StationId\"].to_numpy(),"
+        },
+        {
+          "line": 207,
+          "source": "        \"AQI_pred_extra_trees\": predictions[\"AQI_pred_extra_trees\"].to_numpy(),"
+        },
+        {
+          "line": 208,
+          "source": "        \"AQI_pred_random_forest\": predictions[\"AQI_pred_random_forest\"].to_numpy(),"
+        },
+        {
+          "line": 209,
+          "source": "        \"AQI_t_plus_1_pred\": predictions[\"AQI_t_plus_1_pred\"].to_numpy(),"
+        },
+        {
+          "line": 210,
+          "source": "        \"PredictionHorizonHours\": 1,"
+        },
+        {
+          "line": 213,
+          "source": "        \"FeatureContractVersion\": contract.get(\"contract_version\", \"unknown\"),"
+        },
+        {
+          "line": 217,
+          "source": "        \"ProductionStatus\": \"DISABLED\","
+        },
+        {
+          "line": 218,
+          "source": "        \"PredictionGeneratedAtUTC\": created,"
+        },
+        {
+          "line": 223,
+          "source": "            output[\"PredictionTime\"] = metadata[\"Datetime\"].to_numpy()"
+        },
+        {
+          "line": 244,
+          "source": "        \"station_count\": int(X[\"StationId\"].nunique()),"
+        },
+        {
+          "line": 250,
+          "source": "        \"live_source_validated\": False,"
+        },
+        {
+          "line": 251,
+          "source": "        \"production_enabled\": False,"
+        },
+        {
+          "line": 261,
+          "source": "    print(f\"Rows: {len(output)}; stations: {X['StationId'].nunique()}\")"
+        },
+        {
+          "line": 262,
+          "source": "    print(f\"Predictions: {output_path}\")"
+        },
+        {
+          "line": 264,
+          "source": "    print(\"Production remains disabled.\")"
+        }
+      ],
+      "matched_line_count": 37
+    },
+    {
+      "path": "deployment/tests/phase16_28_aqi_surrogate_feasibility/phase16_28R_diagnostic.json",
+      "sha256": "614091e8fd1d91a09d0cefd5bf5f098c80860116eb6b285216ae8f15b820c3e7",
+      "size_bytes": 873,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 35,
+          "source": "  \"production_source_changed\": false"
+        }
+      ],
+      "matched_line_count": 1
+    },
+    {
+      "path": "deployment/tests/phase16_29_temporal_aqi_surrogate/phase16_29_diagnostic.json",
+      "sha256": "9408faffc17f6669eb4432c2d382755265b01df756cb5032731710a0cebfcedb",
+      "size_bytes": 861,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 33,
+          "source": "  \"production_source_changed\": false,"
+        }
+      ],
+      "matched_line_count": 1
+    },
+    {
+      "path": "deployment/tests/phase17_02B_offline_interface/phase17_02B_offline_interface_readiness.json",
+      "sha256": "33c396a967d6919301ac2e29369857d35793ad80fc13b2c4c2904ba72db6af9e",
+      "size_bytes": 4119,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 5,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 6,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 7,
+          "source": "  \"live_source_download_attempted\": false,"
+        },
+        {
+          "line": 8,
+          "source": "  \"frozen_model_or_feature_contract_changed\": false,"
+        },
+        {
+          "line": 11,
+          "source": "    \"feature_contract\","
+        },
+        {
+          "line": 16,
+          "source": "    \"feature_contract\","
+        },
+        {
+          "line": 20,
+          "source": "    \"feature_contract\": {"
+        },
+        {
+          "line": 21,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/feature_contract.json\","
+        },
+        {
+          "line": 26,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/ensemble_config.json\","
+        },
+        {
+          "line": 31,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/source_status.json\","
+        },
+        {
+          "line": 36,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/deployment_manifest.json\","
+        },
+        {
+          "line": 41,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/src/frozen_aqi_inference.py\","
+        },
+        {
+          "line": 46,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_extra_trees_trainval.joblib\","
+        },
+        {
+          "line": 51,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_random_forest_trainval.joblib\","
+        },
+        {
+          "line": 55,
+          "source": "    \"production_source_guard\": {"
+        },
+        {
+          "line": 56,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/production_source_guard.py\","
+        },
+        {
+          "line": 61,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/offline_inference_example.py\","
+        },
+        {
+          "line": 66,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_81R_final_deployment_lock/phase16_83R_final_release/FINAL_OFFLINE_HANDOFF.md\","
+        },
+        {
+          "line": 72,
+          "source": "    \"feature_contract\": {"
+        },
+        {
+          "line": 90,
+          "source": "        \"feature_contract\","
+        },
+        {
+          "line": 97,
+          "source": "        \"production_source_changed\""
+        },
+        {
+          "line": 106,
+          "source": "        \"predict_aqi\""
+        },
+        {
+          "line": 114,
+          "source": "        \"predict_frozen_ensemble\""
+        },
+        {
+          "line": 119,
+          "source": "    \"production_source_guard\": {"
+        },
+        {
+          "line": 122,
+          "source": "        \"assert_production_source_ready\","
+        },
+        {
+          "line": 126,
+          "source": "        \"ProductionSourceBlocked\""
+        }
+      ],
+      "matched_line_count": 26
+    },
+    {
+      "path": "deployment/tests/phase17_03K_offline_release_evidence/PHASE_17_03K_OFFLINE_RELEASE_EVIDENCE.md",
+      "sha256": "98a2c094b46d1fa3054a71b511becece471e5108cb5776fe90159a1ef76b20cb",
+      "size_bytes": 1030,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 8,
+          "source": "- Phase 17.03I: 23,103 complete-case validation rows passed prediction parity."
+        },
+        {
+          "line": 10,
+          "source": "- Frozen feature contract: 73 features."
+        },
+        {
+          "line": 16,
+          "source": "- Production enabled: **False**"
+        },
+        {
+          "line": 17,
+          "source": "- Production status: `NO_VALIDATED_LIVE_AQI_SOURCE`"
+        },
+        {
+          "line": 19,
+          "source": "The evidence supports the tested offline inference workflow only. It does not validate a live data feed, and it does not authorize production use."
+        },
+        {
+          "line": 23,
+          "source": "- JSON audit: `/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03K_offline_release_evidence/phase17_03K_offline_release_evidence_audit.json`"
+        },
+        {
+          "line": 24,
+          "source": "- SHA-256 artifact manifest: `/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03K_offline_release_evidence/phase17_03K_artifact_sha256_manifest.json`"
+        }
+      ],
+      "matched_line_count": 7
+    },
+    {
+      "path": "deployment/tests/phase17_03K_offline_release_evidence/phase17_03K_artifact_sha256_manifest.json",
+      "sha256": "66d6e607b805fa650d793f4e74608019bbd4e5edfee833541d8014196ebc78a0",
+      "size_bytes": 4357,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 6,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03H_runner_parity/phase17_03H_parity_report.json\","
+        },
+        {
+          "line": 11,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03I_full_validation_runner_parity/phase17_03I_full_validation_parity_report.json\","
+        },
+        {
+          "line": 16,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03J_negative_input_tests/phase17_03J_negative_input_report.json\","
+        },
+        {
+          "line": 20,
+          "source": "    \"feature_contract\": {"
+        },
+        {
+          "line": 21,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/feature_contract.json\","
+        },
+        {
+          "line": 26,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/ensemble_config.json\","
+        },
+        {
+          "line": 31,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/source_status.json\","
+        },
+        {
+          "line": 36,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_extra_trees_trainval.joblib\","
+        },
+        {
+          "line": 41,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_random_forest_trainval.joblib\","
+        },
+        {
+          "line": 46,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/src/frozen_aqi_inference.py\","
+        },
+        {
+          "line": 51,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03B_offline_runner/offline_inference_runner.py\","
+        },
+        {
+          "line": 56,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03B_offline_runner/offline_input_template_73_features.csv\","
+        },
+        {
+          "line": 61,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03B_offline_runner/README_OFFLINE_INFERENCE.md\","
+        },
+        {
+          "line": 66,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03H_runner_parity/phase17_03H_prediction_parity.csv\","
+        },
+        {
+          "line": 71,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03I_full_validation_runner_parity/phase17_03I_prediction_parity.csv\","
+        },
+        {
+          "line": 76,
+          "source": "      \"path\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03J_negative_input_tests/phase17_03J_negative_input_report.json\","
+        }
+      ],
+      "matched_line_count": 16
+    },
+    {
+      "path": "deployment/tests/phase17_03K_offline_release_evidence/phase17_03K_offline_release_evidence_audit.json",
+      "sha256": "122ff000de65976cde7fd2f112dfd86f7d26bbb71699c05db802d50785a51825",
+      "size_bytes": 5882,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 9,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03H_runner_parity/phase17_03H_parity_report.json\""
+        },
+        {
+          "line": 13,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03I_full_validation_runner_parity/phase17_03I_full_validation_parity_report.json\""
+        },
+        {
+          "line": 17,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03J_negative_input_tests/phase17_03J_negative_input_report.json\""
+        },
+        {
+          "line": 19,
+          "source": "    \"artifact_exists_feature_contract\": {"
+        },
+        {
+          "line": 21,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/feature_contract.json\""
+        },
+        {
+          "line": 25,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/ensemble_config.json\""
+        },
+        {
+          "line": 29,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/source_status.json\""
+        },
+        {
+          "line": 33,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_extra_trees_trainval.joblib\""
+        },
+        {
+          "line": 37,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/models/phase15_10_final_tuned_random_forest_trainval.joblib\""
+        },
+        {
+          "line": 41,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/src/frozen_aqi_inference.py\""
+        },
+        {
+          "line": 45,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03B_offline_runner/offline_inference_runner.py\""
+        },
+        {
+          "line": 49,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03B_offline_runner/offline_input_template_73_features.csv\""
+        },
+        {
+          "line": 53,
+          "source": "      \"details\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03B_offline_runner/README_OFFLINE_INFERENCE.md\""
+        },
+        {
+          "line": 71,
+          "source": "    \"three_prediction_columns_in_parity_tolerance\": {"
+        },
+        {
+          "line": 83,
+          "source": "    \"phase_I_production_disabled\": {"
+        },
+        {
+          "line": 85,
+          "source": "      \"details\": \"production_enabled=False\""
+        },
+        {
+          "line": 95,
+          "source": "    \"phase_J_production_disabled\": {"
+        },
+        {
+          "line": 97,
+          "source": "      \"details\": \"production_enabled=False\""
+        },
+        {
+          "line": 99,
+          "source": "    \"frozen_feature_contract\": {"
+        },
+        {
+          "line": 103,
+          "source": "    \"station_id_in_feature_contract\": {"
+        },
+        {
+          "line": 105,
+          "source": "      \"details\": \"StationId position=73\""
+        },
+        {
+          "line": 113,
+          "source": "    \"phase_17_03H\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03H_runner_parity/phase17_03H_parity_report.json\","
+        },
+        {
+          "line": 114,
+          "source": "    \"phase_17_03I\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03I_full_validation_runner_parity/phase17_03I_full_validation_parity_report.json\","
+        },
+        {
+          "line": 115,
+          "source": "    \"phase_17_03J\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03J_negative_input_tests/phase17_03J_negative_input_report.json\""
+        },
+        {
+          "line": 124,
+          "source": "  \"artifact_sha256_manifest\": \"/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/tests/phase17_03K_offline_release_evidence/phase17_03K_artifact_sha256_manifest.json\","
+        },
+        {
+          "line": 126,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 127,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 128,
+          "source": "  \"qualification\": \"This audit validates offline inference artifacts and test evidence only. It does not authorize live production deployment.\""
+        }
+      ],
+      "matched_line_count": 28
+    },
+    {
+      "path": "deployment/tests/phase17_06C_api_inference_integration/test_only_release_gate.json",
+      "sha256": "e5473897a5d52f6ca56797f35161a735bae2e55e7c96d8d03f43fd52a928ec6f",
+      "size_bytes": 365,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 4,
+          "source": "  \"reason\": \"Local integration test only; not production authorization.\","
+        },
+        {
+          "line": 5,
+          "source": "  \"live_source_validated\": true,"
+        },
+        {
+          "line": 6,
+          "source": "  \"production_enabled\": true,"
+        },
+        {
+          "line": 7,
+          "source": "  \"test_only_warning\": \"This file must never replace the real release_gate.json. It exists only to exercise the protected inference route locally.\""
+        }
+      ],
+      "matched_line_count": 4
+    },
+    {
+      "path": "deployment/tests/phase17_06D_deployment_build_readiness/phase17_06D_deployment_build_readiness.json",
+      "sha256": "644bda2b7ee6727cdb51c75ac42961899374e4a87b23024033b90029fe623bee",
+      "size_bytes": 1177,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 5,
+          "source": "  \"project_root\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction\","
+        },
+        {
+          "line": 6,
+          "source": "  \"service_directory\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/phase17_06_inference_api\","
+        },
+        {
+          "line": 7,
+          "source": "  \"build_script\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/phase17_06_inference_api/build_and_smoke_test.sh\","
+        },
+        {
+          "line": 20,
+          "source": "  \"actual_release_gate_unchanged\": true,"
+        },
+        {
+          "line": 21,
+          "source": "  \"production_enabled\": false,"
+        },
+        {
+          "line": 22,
+          "source": "  \"production_status\": \"NO_VALIDATED_LIVE_AQI_SOURCE\","
+        },
+        {
+          "line": 24,
+          "source": "  \"next_step\": \"Run build_and_smoke_test.sh on a Docker-capable host. Keep production disabled until live source and feature-history validation pass.\""
+        }
+      ],
+      "matched_line_count": 7
+    },
+    {
+      "path": "deployment/tests/phase17_07B_metrics_registry_protocol/phase17_07B_research_readiness_summary.json",
+      "sha256": "63505021cdde21a9646142aab0da2bdad1e472f10cbec511024b80e74d8117b9",
+      "size_bytes": 27630,
+      "static_syntax": "not_applicable",
+      "route_decorators": [],
+      "matches": [
+        {
+          "line": 5,
+          "source": "  \"project_root\": \"/content/gdrive/MyDrive/Delhi-AQI-Prediction\","
+        },
+        {
+          "line": 19,
+          "source": "    \"prediction_schema_candidates\": 23"
+        },
+        {
+          "line": 21,
+          "source": "  \"prediction_schema_candidates\": ["
+        },
+        {
+          "line": 23,
+          "source": "      \"relative_path\": \"outputs/phase6_test_predictions.parquet\","
+        },
+        {
+          "line": 27,
+          "source": "        \"StationId\","
+        },
+        {
+          "line": 32,
+          "source": "        \"Persistence_Prediction\","
+        },
+        {
+          "line": 33,
+          "source": "        \"LinearRegression_Prediction\","
+        },
+        {
+          "line": 34,
+          "source": "        \"DecisionTree_Prediction\","
+        },
+        {
+          "line": 35,
+          "source": "        \"RandomForest_Prediction\","
+        },
+        {
+          "line": 36,
+          "source": "        \"XGBoost_Prediction\""
+        },
+        {
+          "line": 40,
+          "source": "      \"relative_path\": \"outputs/reports/phase15_8_top_two_validation_predictions.parquet\","
+        },
+        {
+          "line": 45,
+          "source": "        \"StationId\","
+        },
+        {
+          "line": 47,
+          "source": "        \"Tuned_Extra_Trees_Prediction\","
+        },
+        {
+          "line": 48,
+          "source": "        \"Tuned_Random_Forest_Prediction\""
+        },
+        {
+          "line": 52,
+          "source": "      \"relative_path\": \"outputs/reports/phase15_9_optimized_ensemble_validation_predictions.parquet\","
+        },
+        {
+          "line": 57,
+          "source": "        \"StationId\","
+        },
+        {
+          "line": 59,
+          "source": "        \"Tuned_Extra_Trees_Prediction\","
+        },
+        {
+          "line": 60,
+          "source": "        \"Tuned_Random_Forest_Prediction\","
+        },
+        {
+          "line": 61,
+          "source": "        \"Optimized_Ensemble_Prediction\","
+        },
+        {
+          "line": 66,
+          "source": "      \"relative_path\": \"outputs/FINAL_RESULTS/02_MODEL_RESULTS/EXTRA_TREES/prediction_error_diagnostics.parquet\","
+        },
+        {
+          "line": 71,
+          "source": "        \"StationId\","
+        },
+        {
+          "line": 73,
+          "source": "        \"Prediction\","
+        },
+        {
+          "line": 77,
+          "source": "        \"Predicted_Category\","
+        },
+        {
+          "line": 82,
+          "source": "      \"relative_path\": \"outputs/FINAL_RESULTS/02_MODEL_RESULTS/RANDOM_FOREST/prediction_error_diagnostics.parquet\","
+        },
+        {
+          "line": 87,
+          "source": "        \"StationId\","
+        },
+        {
+          "line": 89,
+          "source": "        \"Prediction\","
+        },
+        {
+          "line": 93,
+          "source": "        \"Predicted_Category\","
+        },
+        {
+          "line": 98,
+          "source": "      \"relative_path\": \"outputs/FINAL_RESULTS/02_MODEL_RESULTS/ENSEMBLE/prediction_error_diagnostics.parquet\","
+        },
+        {
+          "line": 103,
+          "source": "        \"StationId\","
+        },
+        {
+          "line": 105,
+          "source": "        \"Prediction\","
+        },
+        {
+          "line": 109,
+          "source": "        \"Predicted_Category\","
+        },
+        {
+          "line": 114,
+          "source": "      \"relative_path\": \"outputs/reports/phase15_12_final_holdout/phase15_12_final_holdout_predictions.parquet\","
+        },
+        {
+          "line": 119,
+          "source": "        \"StationId\","
+        },
+        {
+          "line": 121,
+          "source": "        \"Tuned_Extra_Trees_Prediction\","
+        },
+        {
+          "line": 122,
+          "source": "        \"Tuned_Random_Forest_Prediction\","
+        },
+        {
+          "line": 123,
+          "source": "        \"Final_Ensemble_Prediction\","
+        },
+        {
+          "line": 124,
+          "source": "        \"Persistence_Prediction\","
+        },
+        {
+          "line": 130,
+          "source": "      \"relative_path\": \"outputs/checkpoints/session_runtime/prediction_df.parquet\","
+        },
+        {
+          "line": 135,
+          "source": "        \"StationId\","
+        },
+        {
+          "line": 137,
+          "source": "        \"Tuned_Extra_Trees_Prediction\","
+        },
+        {
+          "line": 138,
+          "source": "        \"Tuned_Random_Forest_Prediction\","
+        },
+        {
+          "line": 139,
+          "source": "        \"Final_Ensemble_Prediction\","
+        },
+        {
+          "line": 140,
+          "source": "        \"Persistence_Prediction\","
+        },
+        {
+          "line": 151,
+          "source": "        \"StationId\","
+        },
+        {
+          "line": 153,
+          "source": "        \"Tuned_Extra_Trees_Prediction\","
+        }
+      ],
+      "matched_line_count": 186
+    }
+  ],
+  "limitations": [
+    "Static inspection does not prove live-source suitability.",
+    "Static inspection does not prove deployed runtime behavior.",
+    "No HTTP endpoint or release gate was activated or called.",
+    "Credential values are not intentionally included in the report."
+  ]
+}

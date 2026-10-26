@@ -1,0 +1,28 @@
+{
+  "phase": "17.06E",
+  "decision": "CLOUD_RUN_HANDOFF_READY_PRIVATE_STAGING_ONLY",
+  "created_at_utc": "2026-10-21T12:04:47.650539+00:00",
+  "project_root": "/content/gdrive/MyDrive/Delhi-AQI-Prediction",
+  "base_release_zip": "/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_03L_offline_release/Delhi-AQI-Prediction_phase17_03L_offline_release.zip",
+  "base_release_sha256": "69b5805fc4bd3c08452075fd7cc3e3bb5faed73ca9b4c6332664a0ec63c1dc46",
+  "overlay_zip": "/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_06E_cloud_run_handoff/phase17_06E_cloud_run_overlay.zip",
+  "overlay_sha256": "043be64ce3a1816c089c921b6795683ada035149797f5e445c4a5b6b07a4c5f1",
+  "overlay_size_bytes": 18234,
+  "overlay_member_count": 13,
+  "required_archive_members_verified": true,
+  "root_dockerfile_created": true,
+  "gcloudignore_created": true,
+  "cloud_run_deploy_script": "/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/phase17_06_inference_api/deploy_to_cloud_run_staging.sh",
+  "deployment_guide": "/content/gdrive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_06E_cloud_run_handoff/PHASE_17_06E_CLOUD_RUN_DEPLOYMENT_GUIDE.md",
+  "frozen_model_hashes_verified": true,
+  "frozen_feature_count": 73,
+  "live_source_validated": false,
+  "production_enabled": false,
+  "production_status": "NO_VALIDATED_LIVE_AQI_SOURCE",
+  "final_holdout_rows_used": 0,
+  "deployment_requires": [
+    "Google Cloud project with billing and required API permissions",
+    "Upload base release ZIP and overlay ZIP to Cloud Shell",
+    "Cloud Run Invoker access for private endpoint testing"
+  ]
+}

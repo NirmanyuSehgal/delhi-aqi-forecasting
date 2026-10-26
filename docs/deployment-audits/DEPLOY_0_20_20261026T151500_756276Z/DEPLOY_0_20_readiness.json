@@ -1,0 +1,198 @@
+{
+  "phase": "DEPLOY-0.20",
+  "created_at_utc": "2026-10-26T15:15:00.756276+00:00",
+  "overall_status": "OFFLINE_BATCH_VERIFIED_LIVE_DEPLOYMENT_BLOCKED",
+  "offline_batch_runner": {
+    "status": "PASS",
+    "rows_predicted": 17,
+    "stations_covered": 6,
+    "feature_count": 73,
+    "feature_order_matches_contract": true,
+    "target_excluded_from_model_input": true,
+    "validation_split_only": true,
+    "final_holdout_rows_used": 0,
+    "repeatability_max_abs_difference": 1.1368683772161603e-13,
+    "repeatability_tolerance": 1e-10,
+    "repeatability_pass": true,
+    "runner_static_compile": "PASS",
+    "predictions_path": "/content/drive/MyDrive/Delhi-AQI-Prediction/outputs/deployment_candidates/phase17_07_cli_smoke_inprocess_20261026T143835_062129Z/batch_predictions.parquet",
+    "diagnostics_path": "/content/drive/MyDrive/Delhi-AQI-Prediction/outputs/deployment_candidates/phase17_07_cli_smoke_inprocess_20261026T143835_062129Z/batch_predictions.diagnostics.json",
+    "prior_smoke_reference_path": "/content/drive/MyDrive/Delhi-AQI-Prediction/outputs/deployment_candidates/inference_smoke_test_20261026T141815_865046Z/validation_smoke_predictions.parquet",
+    "predictions_sha256": "420eba9056768feafc80c7d4f29393690068fae63d3081324e1cc44d40e73c35"
+  },
+  "frozen_package": {
+    "package_path": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package",
+    "feature_contract_path": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/phase16_33_frozen_model_package/config/feature_contract.json",
+    "candidate_path": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z",
+    "candidate_manifest_path": "/content/drive/MyDrive/Delhi-AQI-Prediction/deployment/releases/phase17_07_offline_batch_candidate_20261026T143528_100244Z/candidate_manifest.json",
+    "candidate_manifest": {
+      "phase": "DEPLOY-0.18-FIX",
+      "created_at_utc": "2026-10-26T14:35:28.100244+00:00",
+      "status": "OFFLINE_ONLY_CANDIDATE_NOT_LIVE_PRODUCTION",
+      "contract_version": "delhi_aqi_73_features_v1",
+      "feature_count": 73,
+      "target": "AQI_t_plus_1",
+      "expected_model_hashes": {
+        "extra_trees": "f0b3d43a56a7d5e4f08554f37ff234e1b5e012b5d5d69f18c750844b36cbe72d",
+        "random_forest": "538b5ff34152d19221518e831528093b7bcc57e2b05f82669718f540b514abd8"
+      },
+      "models_loaded_during_creation": false,
+      "models_retrained": false,
+      "models_retuned": false,
+      "frozen_package_modified": false,
+      "feature_builder_included": false,
+      "live_source_validated": false,
+      "production_enabled": false,
+      "syntax_check": "PASS",
+      "runtime_versions": {
+        "python": "3.13.16",
+        "numpy": "2.1.3",
+        "pandas": "2.2.3",
+        "joblib": "1.6.0",
+        "scikit_learn": "1.6.1",
+        "pyarrow": "23.0.1"
+      },
+      "files": {
+        "src/batch_predict.py": "66f9aaaff04059214706ab806e8f598ce8a5423b4a4f7ea7c046992dd01309ac",
+        "README.md": "5920abb7b3a0229c87dc4ee07f757cef13797b84ca01dec0c83f831330396beb",
+        "requirements.txt": "e3c57e7fe21869a8c469271ca9fea858400bf2176fc806d062e0c4a357bd56fe"
+      }
+    },
+    "model_retraining_performed": false,
+    "model_retuning_performed": false,
+    "models_loaded_in_this_audit": false
+  },
+  "live_deployment_gate": {
+    "live_source_validated": false,
+    "production_enabled": false,
+    "blocker": "A source has not yet been demonstrated to provide the required hourly pollutant inputs, stable mapping to the ten allowed stations, and a leakage-free feature vector matching the frozen 73-feature training/inference contract.",
+    "required_before_activation": [
+      "Validate live pollutant coverage and stable source-to-station mapping.",
+      "Build current features using the parity-tested feature process.",
+      "Demonstrate hourly historical/live feature parity and freshness checks.",
+      "Pass source-integrity, missingness, and release-gate checks.",
+      "Obtain explicit authorization before enabling production."
+    ],
+    "source_status_snapshot": {
+      "created_at": "2026-10-04T11:43:41.569357+00:00",
+      "xkdr": {
+        "status": "not_usable_for_frozen_live_vector",
+        "direct_aqi_available": false,
+        "latest_test": "phase16_31",
+        "complete_11_non_aqi_current_window": 0
+      },
+      "ogd": {
+        "status": "api_network_unreachable_from_colab_runtime",
+        "latest_test": "phase16_32R",
+        "production_source_changed": false,
+        "api_key_saved": false
+      },
+      "production_policy": {
+        "frozen_73_feature_contract": true,
+        "model_retraining": false,
+        "model_retuning": false,
+        "holdout_modification": false,
+        "surrogate_aqi_production_use": false
+      }
+    },
+    "prior_readiness_snapshot": {
+      "timestamp_utc": "2026-10-06T17:00:04.038235+00:00",
+      "project": {
+        "target": "AQI_t_plus_1",
+        "stations": 10,
+        "features": 73
+      },
+      "frozen_model": {
+        "extra_trees_weight": 0.594466,
+        "random_forest_weight": 0.405534,
+        "contract_exact": true,
+        "package_integrity": true,
+        "et_sha256": "f0b3d43a56a7d5e4f08554f37ff234e1b5e012b5d5d69f18c750844b36cbe72d",
+        "rf_sha256": "538b5ff34152d19221518e831528093b7bcc57e2b05f82669718f540b514abd8"
+      },
+      "final_holdout": {
+        "rows": 68352,
+        "mae": 3.216121,
+        "rmse": 7.65839,
+        "r2": 0.996634,
+        "untouched": true
+      },
+      "source_discovery": {
+        "validated_sources": [],
+        "production_status": "NO_VALIDATED_LIVE_AQI_SOURCE",
+        "matrix": {
+          "XKDR": {
+            "status": "CLOSED",
+            "production_ready": false,
+            "reason": "Fresh tested windows returned incomplete pollutant coverage and no AQI parameter."
+          },
+          "OGD_data_gov_in": {
+            "status": "CLOSED_UNVALIDATED",
+            "production_ready": false,
+            "reason": "Official API access was blocked from Colab at the network layer; production capability was not validated."
+          },
+          "CPCB_live_portal": {
+            "status": "CLOSED_UNVALIDATED",
+            "production_ready": false,
+            "reason": "Current CPCB production data route was not confirmed from the deployment environment."
+          },
+          "DPCC_live_portal": {
+            "status": "CLOSED",
+            "production_ready": false,
+            "reason": "Pollutants could be reached for part of the station set, but a complete frozen-vector + AQI path was not validated."
+          },
+          "OpenCity": {
+            "status": "CLOSED",
+            "production_ready": false,
+            "reason": "Historical AQI-like data did not pass provenance validation against the frozen reference."
+          },
+          "CPCB_reconstruction": {
+            "status": "CLOSED",
+            "production_ready": false,
+            "reason": "Reconstruction failed provenance/accuracy requirements."
+          },
+          "Open_Meteo": {
+            "status": "CLOSED",
+            "production_ready": false,
+            "reason": "Exact provenance confirmed for CPCBCCR /AQI_India, but the available variables do not provide the frozen 11-pollutant station vector."
+          },
+          "AQICN_WAQI": {
+            "status": "CLOSED",
+            "production_ready": false,
+            "reason": "All 10 frozen station pages found, but 0/10 expose the complete frozen 11-pollutant vector."
+          }
+        }
+      },
+      "production_lock": {
+        "production_enabled": false,
+        "status": "NO_VALIDATED_LIVE_AQI_SOURCE",
+        "reason": "No validated live source currently supplies the complete frozen 73-feature vector with compatible station/AQI provenance.",
+        "forbidden_fallbacks": [
+          "Open-Meteo substitution",
+          "AQICN substitution",
+          "AQI surrogate",
+          "AQI reconstruction",
+          "silent feature substitution"
+        ]
+      },
+      "safety": {
+        "model_touched": false,
+        "model_retrained": false,
+        "model_retuned": false,
+        "final_holdout_touched": false,
+        "holdout_rows_used": 0,
+        "production_source_changed": false,
+        "feature_contract_changed": false,
+        "aqi_reconstruction": false,
+        "aqi_surrogate": false
+      }
+    },
+    "api_gate_related_files": [
+      "deployment/phase17_06_inference_api/release_gate.json"
+    ]
+  },
+  "evidence_not_repeated": {
+    "model_hash_verification": "Previously passed in DEPLOY-0.2; model files were not rehashed during this audit.",
+    "feature_engineering_parity": "Previously passed in DEPLOY-0.9; this cell verifies the saved 73-feature contract and current CLI smoke-test evidence."
+  }
+}

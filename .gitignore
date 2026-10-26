@@ -1,0 +1,39 @@
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+.git-credentials
+
+# Large model/data artifacts
+*.joblib
+*.pkl
+*.pickle
+*.parquet
+*.csv
+*.zip
+*.gz
+*.feather
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.sqlite
+*.db
+data/
+models/
+checkpoints/
+outputs/
+artifacts/
+cache/
+logs/
+
+# Python and notebook runtime state
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/

@@ -1,0 +1,58 @@
+{
+  "phase": "DEPLOY-0.23",
+  "mode": "local_in_process_blocked_state_test",
+  "real_gate_live_source_validated": false,
+  "real_gate_production_enabled": false,
+  "models_loaded_intentionally": false,
+  "server_started": false,
+  "production_activation_attempted": false,
+  "http_results": {
+    "healthz": {
+      "status_code": 200,
+      "expected_status_code": 200,
+      "pass": true
+    },
+    "readyz": {
+      "status_code": 503,
+      "expected_status_code": 503,
+      "pass": true,
+      "response": {
+        "ready": false,
+        "status": "NO_VALIDATED_LIVE_AQI_SOURCE",
+        "reasons": [
+          "live_source_not_validated_in_release_gate",
+          "production_disabled_in_release_gate",
+          "LIVE_SOURCE_VALIDATED_environment_flag_not_true",
+          "PRODUCTION_ENABLED_environment_flag_not_true"
+        ],
+        "feature_count": 73,
+        "production_enabled": false
+      }
+    },
+    "predict": {
+      "status_code": 503,
+      "expected_status_code": 503,
+      "pass": true,
+      "response": {
+        "detail": {
+          "error": "production_predictions_blocked",
+          "status": "NO_VALIDATED_LIVE_AQI_SOURCE",
+          "reasons": [
+            "live_source_not_validated_in_release_gate",
+            "production_disabled_in_release_gate",
+            "LIVE_SOURCE_VALIDATED_environment_flag_not_true",
+            "PRODUCTION_ENABLED_environment_flag_not_true"
+          ]
+        }
+      }
+    }
+  },
+  "test_status": "PASS",
+  "errors": [],
+  "real_release_gate_sha256_before": "33b7ab29ca6fda438baa2bb0c2cb142e8307090fe3260b56aa718026e6c116f9",
+  "real_release_gate_sha256_after": "33b7ab29ca6fda438baa2bb0c2cb142e8307090fe3260b56aa718026e6c116f9",
+  "real_release_gate_unchanged": true,
+  "production_enabled": false,
+  "live_source_validated": false,
+  "created_at_utc": "2026-10-26T15:46:52.539955+00:00"
+}
