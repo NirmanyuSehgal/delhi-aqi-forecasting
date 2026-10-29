@@ -1,0 +1,53 @@
+{
+  "release_id": "phase18_00_colab_live_dashboard_demo",
+  "created_at_utc": "2026-10-29T13:44:03.228782+00:00",
+  "status": "PREPARED_NOT_STAGED",
+  "base_commit": "ae1ff75565ae51eb9418379db0ba30dac1f83c45",
+  "target_branch": "main",
+  "demo_notebook": "notebooks/Delhi_AQI_Live_TPlus1_Dashboard_Demo.ipynb",
+  "forecast_target": "AQI_t_plus_1",
+  "feature_contract_count": 73,
+  "supported_station_count": 10,
+  "ensemble_weights": {
+    "tuned_extra_trees": 0.594466,
+    "tuned_random_forest": 0.405534
+  },
+  "source_mode": "official_station_AQI_only",
+  "demo_status": "SHADOW_ONLY_NOT_PRODUCTION",
+  "production_enabled": false,
+  "live_source_validated_for_full_feature_contract": false,
+  "observed_live_frame_audit_2026_10_29": {
+    "rows": 10,
+    "feature_cells": 730,
+    "missing_feature_cells": 560,
+    "missing_feature_fraction": 0.7671232877,
+    "raw_pollutant_measurements_available_in_station_records": 0
+  },
+  "model_binaries_included": false,
+  "datasets_included": false,
+  "credentials_included": false,
+  "release_gate_path": "deployment/phase17_06_inference_api/release_gate.json",
+  "release_gate_sha256": "33b7ab29ca6fda438baa2bb0c2cb142e8307090fe3260b56aa718026e6c116f9",
+  "files": [
+    {
+      "path": "notebooks/Delhi_AQI_Live_TPlus1_Dashboard_Demo.ipynb",
+      "size_bytes": 17791,
+      "sha256": "810d3d0885cccd1a594eb129ca3ab2ac86d1ce3d5b8e692f5ea5aa192b8f7e5a"
+    },
+    {
+      "path": "deployment/phase17_06_inference_api/src/shadow_live.py",
+      "size_bytes": 16746,
+      "sha256": "ff1f137506be4d4c4fa5d4b92155bddd1afada67e1aedd22090d25f9d52cd4a7"
+    },
+    {
+      "path": "deployment/phase17_06_inference_api/src/canonical_aqi_features.py",
+      "size_bytes": 3879,
+      "sha256": "a19322456df1a92d49c266c9dcd59f7d084f11e5b63383a01f80a74f43dbadb8"
+    },
+    {
+      "path": "deployment/phase17_06_inference_api/src/frozen_aqi_inference_missing_aware_candidate.py",
+      "size_bytes": 4713,
+      "sha256": "ee259dbf5b7a1cc30678c4fe9fd088254eb773d8c24a226d2cbaacb8597d968b"
+    }
+  ]
+}

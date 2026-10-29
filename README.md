@@ -54,3 +54,48 @@ This repository does not redistribute the raw air-quality dataset. Verify the
 data source's license and citation requirements before publishing data,
 derived datasets, or this project publicly. Add an appropriate project license
 only after confirming rights for all included material.
+## Live T+1 Dashboard Demo (Colab)
+
+The repository includes a Gradio dashboard notebook for demonstrating the
+live next-hour forecasting workflow:
+
+`notebooks/Delhi_AQI_Live_TPlus1_Dashboard_Demo.ipynb`
+
+### Run the presentation demo
+
+1. Open the notebook in Google Colab.
+2. Ensure Google Drive contains the original `Delhi-AQI-Prediction` project
+   directory, including the frozen model artifacts and deployment configuration.
+3. Run the single launcher cell.
+4. Select one of the ten supported Delhi stations and click
+   **Predict Next-Hour AQI**.
+5. The dashboard requests fresh hourly AQI snapshots, validates the live
+   history, builds the frozen 73-feature input, and displays the Extra Trees,
+   Random Forest, and final weighted ensemble predictions.
+
+The launcher uses the original frozen models. It does not retrain them.
+
+### Demo status and live-data limitation
+
+**The dashboard is a live shadow demonstration, not a production deployment.**
+
+The verified public station feed supplied AQI readings and observation
+timestamps but did not supply the pollutant concentration measurements
+required by the complete frozen model input. In the audited live feature frame
+on 2026-10-29, 560 of 730 feature cells were missing (76.71%). The frozen
+pipelines impute unavailable inputs, so the displayed forecast must not be
+presented as a fully observed-input or production-validated forecast.
+
+The production release gate remains disabled. The successful Colab demo does
+not change the production status, and historical holdout metrics are not a
+substitute for live end-to-end validation.
+
+### Runtime and artifacts
+
+The Gradio sharing URL is temporary and works only while the Colab runtime
+remains active. Each Predict click requests new source history. The launcher
+requires the original project and frozen model files in Google Drive.
+
+Large model binaries, datasets, checkpoints, and prediction outputs are
+intentionally excluded from GitHub. The demo notebook in this repository
+contains no saved execution outputs.
